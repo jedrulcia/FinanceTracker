@@ -13,12 +13,11 @@ namespace FinanceTracker.EntityFramework
 		DbSet<Salary> Salary {  get; set; }
 		DbSet<OngoingExpenses> OngoingExpenses { get; set; }
 		DbSet<OtherExpenses> OtherExpenses { get; set; }
+		public FinanceTrackerDbContext(DbContextOptions options) : base(options){ }
 
-		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
-			optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=FinanceTracker;Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=False");
-
-			base.OnConfiguring(optionsBuilder);
+			base.OnModelCreating(modelBuilder);
 		}
 	}
 }

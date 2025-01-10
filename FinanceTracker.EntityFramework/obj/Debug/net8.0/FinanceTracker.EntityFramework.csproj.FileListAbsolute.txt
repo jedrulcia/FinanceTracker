@@ -3,3 +3,16 @@ C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTr
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.EntityFramework\obj\Debug\net8.0\FinanceTracker.EntityFramework.AssemblyInfoInputs.cache
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.EntityFramework\obj\Debug\net8.0\FinanceTracker.EntityFramework.AssemblyInfo.cs
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.EntityFramework\obj\Debug\net8.0\FinanceTracker.EntityFramework.csproj.CoreCompileInputs.cache
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.EntityFramework\bin\Debug\net8.0\FinanceTracker.EntityFramework.deps.json
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.EntityFramework\bin\Debug\net8.0\FinanceTracker.EntityFramework.runtimeconfig.json
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.EntityFramework\bin\Debug\net8.0\FinanceTracker.EntityFramework.dll
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.EntityFramework\bin\Debug\net8.0\FinanceTracker.EntityFramework.pdb
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.EntityFramework\bin\Debug\net8.0\FinanceTracker.Domain.dll
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.EntityFramework\bin\Debug\net8.0\FinanceTracker.Domain.pdb
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.EntityFramework\obj\Debug\net8.0\FinanceTracker.EntityFramework.sourcelink.json
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.EntityFramework\obj\Debug\net8.0\FinanceT.DE1FF3EB.Up2Date
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.EntityFramework\obj\Debug\net8.0\FinanceTracker.EntityFramework.dll
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.EntityFramework\obj\Debug\net8.0\refint\FinanceTracker.EntityFramework.dll
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.EntityFramework\obj\Debug\net8.0\FinanceTracker.EntityFramework.pdb
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.EntityFramework\obj\Debug\net8.0\FinanceTracker.EntityFramework.genruntimeconfig.cache
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.EntityFramework\obj\Debug\net8.0\ref\FinanceTracker.EntityFramework.dll

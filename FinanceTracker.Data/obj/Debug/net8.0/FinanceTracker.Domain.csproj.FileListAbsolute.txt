@@ -2,3 +2,11 @@ C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTr
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.Data\obj\Debug\net8.0\FinanceTracker.Domain.AssemblyInfoInputs.cache
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.Data\obj\Debug\net8.0\FinanceTracker.Domain.AssemblyInfo.cs
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.Data\obj\Debug\net8.0\FinanceTracker.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.Data\bin\Debug\net8.0\FinanceTracker.Domain.deps.json
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.Data\bin\Debug\net8.0\FinanceTracker.Domain.dll
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.Data\bin\Debug\net8.0\FinanceTracker.Domain.pdb
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.Data\obj\Debug\net8.0\FinanceTracker.Domain.sourcelink.json
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.Data\obj\Debug\net8.0\FinanceTracker.Domain.dll
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.Data\obj\Debug\net8.0\refint\FinanceTracker.Domain.dll
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.Data\obj\Debug\net8.0\FinanceTracker.Domain.pdb
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.Data\obj\Debug\net8.0\ref\FinanceTracker.Domain.dll
