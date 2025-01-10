@@ -1,0 +1,4 @@
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.Data\obj\Debug\net8.0\FinanceTracker.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.Data\obj\Debug\net8.0\FinanceTracker.Domain.AssemblyInfoInputs.cache
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.Data\obj\Debug\net8.0\FinanceTracker.Domain.AssemblyInfo.cs
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.Data\obj\Debug\net8.0\FinanceTracker.Domain.csproj.CoreCompileInputs.cache

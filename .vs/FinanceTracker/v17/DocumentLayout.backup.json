@@ -1,0 +1,236 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{27C9DBAD-484B-40B9-9488-080772EA203A}|FinanceTracker.EntityFramework\\FinanceTracker.EntityFramework.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.entityframework\\financetrackerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{27C9DBAD-484B-40B9-9488-080772EA203A}|FinanceTracker.EntityFramework\\FinanceTracker.EntityFramework.csproj|solutionrelative:financetracker.entityframework\\financetrackerdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.data\\contracts\\iongoingexpensesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|solutionrelative:financetracker.data\\contracts\\iongoingexpensesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.data\\repositories\\salaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|solutionrelative:financetracker.data\\repositories\\salaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.data\\repositories\\otherexpensesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|solutionrelative:financetracker.data\\repositories\\otherexpensesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.data\\repositories\\ongoingexpensesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|solutionrelative:financetracker.data\\repositories\\ongoingexpensesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.data\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|solutionrelative:financetracker.data\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.data\\contracts\\isalaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|solutionrelative:financetracker.data\\contracts\\isalaryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.data\\contracts\\iotherexpensesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|solutionrelative:financetracker.data\\contracts\\iotherexpensesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.data\\contracts\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|solutionrelative:financetracker.data\\contracts\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.data\\models\\ongoingexpenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|solutionrelative:financetracker.data\\models\\ongoingexpenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.data\\models\\salary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|solutionrelative:financetracker.data\\models\\salary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.data\\models\\otherexpenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B063720E-E60F-4B13-B0C3-D2303504C062}|FinanceTracker.Data\\FinanceTracker.Data.csproj|solutionrelative:financetracker.data\\models\\otherexpenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 215,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FinanceTrackerDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.EntityFramework\\FinanceTrackerDbContext.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.EntityFramework\\FinanceTrackerDbContext.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.EntityFramework\\FinanceTrackerDbContext.cs",
+              "RelativeToolTip": "FinanceTracker.EntityFramework\\FinanceTrackerDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T17:30:35.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SalaryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Repositories\\SalaryRepository.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.Data\\Repositories\\SalaryRepository.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Repositories\\SalaryRepository.cs",
+              "RelativeToolTip": "FinanceTracker.Data\\Repositories\\SalaryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T17:23:13.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OtherExpensesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Repositories\\OtherExpensesRepository.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.Data\\Repositories\\OtherExpensesRepository.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Repositories\\OtherExpensesRepository.cs",
+              "RelativeToolTip": "FinanceTracker.Data\\Repositories\\OtherExpensesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T17:23:09.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OngoingExpensesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Repositories\\OngoingExpensesRepository.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.Data\\Repositories\\OngoingExpensesRepository.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Repositories\\OngoingExpensesRepository.cs",
+              "RelativeToolTip": "FinanceTracker.Data\\Repositories\\OngoingExpensesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T17:23:07.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.Data\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "FinanceTracker.Data\\Repositories\\GenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T17:22:37.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ISalaryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Contracts\\ISalaryRepository.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.Data\\Contracts\\ISalaryRepository.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Contracts\\ISalaryRepository.cs",
+              "RelativeToolTip": "FinanceTracker.Data\\Contracts\\ISalaryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T17:22:28.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IOtherExpensesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Contracts\\IOtherExpensesRepository.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.Data\\Contracts\\IOtherExpensesRepository.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Contracts\\IOtherExpensesRepository.cs",
+              "RelativeToolTip": "FinanceTracker.Data\\Contracts\\IOtherExpensesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T17:22:25.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IOngoingExpensesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Contracts\\IOngoingExpensesRepository.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.Data\\Contracts\\IOngoingExpensesRepository.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Contracts\\IOngoingExpensesRepository.cs",
+              "RelativeToolTip": "FinanceTracker.Data\\Contracts\\IOngoingExpensesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAcAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T17:21:57.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Contracts\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.Data\\Contracts\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Contracts\\IGenericRepository.cs",
+              "RelativeToolTip": "FinanceTracker.Data\\Contracts\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T17:21:54.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Salary.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Models\\Salary.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.Data\\Models\\Salary.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Models\\Salary.cs",
+              "RelativeToolTip": "FinanceTracker.Data\\Models\\Salary.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T17:19:50.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OtherExpenses.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Models\\OtherExpenses.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.Data\\Models\\OtherExpenses.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Models\\OtherExpenses.cs",
+              "RelativeToolTip": "FinanceTracker.Data\\Models\\OtherExpenses.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T17:19:48.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OngoingExpenses.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Models\\OngoingExpenses.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.Data\\Models\\OngoingExpenses.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\Models\\OngoingExpenses.cs",
+              "RelativeToolTip": "FinanceTracker.Data\\Models\\OngoingExpenses.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T17:19:42.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
