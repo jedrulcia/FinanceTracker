@@ -6,5 +6,5 @@ public class Salary
 	public string Name { get; set; }
 	public int Value { get; set; }
 	public DateTime Date { get; set; }
-	public bool Received { get; set; } = false;
+	public bool Paid { get; set; } = false;
 }

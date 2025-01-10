@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceTracker.Domain", "Fi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceTracker.EntityFramework", "FinanceTracker.EntityFramework\FinanceTracker.EntityFramework.csproj", "{27C9DBAD-484B-40B9-9488-080772EA203A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{42BC37BF-C7E7-4003-AA64-B8EB02C318A8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinanceTracker.WPF", "FinanceTracker.WPF\FinanceTracker.WPF.csproj", "{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}"
 EndProject
 Global
@@ -25,10 +23,6 @@ Global
 		{27C9DBAD-484B-40B9-9488-080772EA203A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27C9DBAD-484B-40B9-9488-080772EA203A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27C9DBAD-484B-40B9-9488-080772EA203A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{42BC37BF-C7E7-4003-AA64-B8EB02C318A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{42BC37BF-C7E7-4003-AA64-B8EB02C318A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{42BC37BF-C7E7-4003-AA64-B8EB02C318A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{42BC37BF-C7E7-4003-AA64-B8EB02C318A8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}.Release|Any CPU.ActiveCfg = Release|Any CPU

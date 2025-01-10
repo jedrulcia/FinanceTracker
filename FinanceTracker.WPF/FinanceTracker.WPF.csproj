@@ -8,4 +8,13 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FinanceTracker.Data\FinanceTracker.Domain.csproj" />
+    <ProjectReference Include="..\FinanceTracker.EntityFramework\FinanceTracker.EntityFramework.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\" />
+  </ItemGroup>
+
 </Project>

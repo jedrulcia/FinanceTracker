@@ -4,9 +4,55 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FinanceTracker.WPF"
+        xmlns:controls="clr-namespace:FinanceTracker.WPF.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="680" Width="1200">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="22*"/>
+        </Grid.ColumnDefinitions>
 
+
+        <!-- Lista MIESIAC/ROK -->
+        <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="3">
+            <controls:CreateButton/>
+        </Grid>
+
+        <!-- WYKRES KOLOWY -->
+        <Grid Grid.Row="0" Grid.Column="1">
+        </Grid>
+
+        <!-- WYKRES KOLOWY -->
+        <Grid Grid.Row="1" Grid.Column="1"></Grid>
+
+        <!-- PODSUMOWANIE -->
+        <Grid Grid.Row="2" Grid.Column="1"></Grid>
+
+        <!-- AVERAGE -->
+        <Grid Grid.Row="0" Grid.Column="2"></Grid>
+
+        <!-- SALARIES -->
+        <Grid Grid.Row="1" Grid.Column="2"></Grid>
+
+        <!-- CHART -->
+        <Grid Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3"></Grid>
+
+        <!-- ONGOING EXPENSES -->
+        <Grid Grid.Row="0" Grid.Column="3" Grid.RowSpan="2"></Grid>
+
+        <!-- OTHER EXPENSES -->
+        <Grid Grid.Row="0" Grid.Column="4"></Grid>
+
+        <!-- OVERDUE PAYMENTS -->
+        <Grid Grid.Row="1" Grid.Column="4"></Grid>
     </Grid>
 </Window>

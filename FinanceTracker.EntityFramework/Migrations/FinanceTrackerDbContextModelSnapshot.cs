@@ -22,7 +22,7 @@ namespace FinanceTracker.EntityFramework.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("FinanceTracker.Domain.Data.OngoingExpenses", b =>
+            modelBuilder.Entity("FinanceTracker.Domain.Data.OngoingExpenseTypes", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -30,12 +30,64 @@ namespace FinanceTracker.EntityFramework.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("OngoingExpenseTypes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Jedzenie"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Paliwo"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Mieszkanie"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Rachunki"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Name = "Raty"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Name = " "
+                        });
+                });
+
+            modelBuilder.Entity("FinanceTracker.Domain.Data.OngoingExpenses", b =>
+                {
+                    b.Property<int?>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"));
+
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("OngoingExpenseTypesId")
+                        .HasColumnType("int");
 
                     b.Property<bool>("Paid")
                         .HasColumnType("bit");
@@ -50,11 +102,11 @@ namespace FinanceTracker.EntityFramework.Migrations
 
             modelBuilder.Entity("FinanceTracker.Domain.Data.OtherExpenses", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"));
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
@@ -76,11 +128,11 @@ namespace FinanceTracker.EntityFramework.Migrations
 
             modelBuilder.Entity("FinanceTracker.Domain.Data.Salary", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int?>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("Id"));
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
@@ -89,7 +141,7 @@ namespace FinanceTracker.EntityFramework.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("Received")
+                    b.Property<bool>("Paid")
                         .HasColumnType("bit");
 
                     b.Property<int>("Value")
