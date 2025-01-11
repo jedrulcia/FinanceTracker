@@ -62,6 +62,12 @@ C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTr
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\FinanceTracker.WPF.pdb
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\FinanceTracker.WPF.genruntimeconfig.cache
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\ref\FinanceTracker.WPF.dll
-C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\Controls\CreateButton.g.cs
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\Controls\ButtonModule.g.cs
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\Controls\ButtonModule.baml
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\Styles\Common.baml
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\App.baml
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\Controls\CreateButton.g.cs
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\Controls\CreateButton.baml
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\Controls\ComboBoxNavigator.g.cs
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\Controls\ComboBoxNavigator.baml

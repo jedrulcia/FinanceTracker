@@ -3,36 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27C9DBAD-484B-40B9-9488-080772EA203A}|FinanceTracker.EntityFramework\\FinanceTracker.EntityFramework.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.entityframework\\financetracker.entityframework.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{27C9DBAD-484B-40B9-9488-080772EA203A}|FinanceTracker.EntityFramework\\FinanceTracker.EntityFramework.csproj|solutionrelative:financetracker.entityframework\\financetracker.entityframework.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\controls\\buttonmodule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\controls\\buttonmodule.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\controls\\createbutton.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\controls\\createbutton.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\viewmodels\\mainwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\viewmodels\\mainwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\viewmodels\\basevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\viewmodels\\basevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\controls\\comboboxnavigator.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\controls\\comboboxnavigator.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\commands\\updatecurrentviewmodelcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\commands\\updatecurrentviewmodelcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\viewmodels\\mainvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\viewmodels\\mainvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\controls\\comboboxnavigator.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\controls\\comboboxnavigator.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\state\\inavigator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\state\\inavigator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\state\\navigator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\state\\navigator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 215,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -59,76 +75,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "CreateButton.xaml",
-              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Controls\\CreateButton.xaml",
-              "RelativeDocumentMoniker": "FinanceTracker.WPF\\Controls\\CreateButton.xaml",
-              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Controls\\CreateButton.xaml",
-              "RelativeToolTip": "FinanceTracker.WPF\\Controls\\CreateButton.xaml",
+              "Title": "ComboBoxNavigator.xaml",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Controls\\ComboBoxNavigator.xaml",
+              "RelativeDocumentMoniker": "FinanceTracker.WPF\\Controls\\ComboBoxNavigator.xaml",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Controls\\ComboBoxNavigator.xaml",
+              "RelativeToolTip": "FinanceTracker.WPF\\Controls\\ComboBoxNavigator.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-10T23:12:51.148Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FinanceTracker.EntityFramework",
-              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.EntityFramework\\FinanceTracker.EntityFramework.csproj",
-              "RelativeDocumentMoniker": "FinanceTracker.EntityFramework\\FinanceTracker.EntityFramework.csproj",
-              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.EntityFramework\\FinanceTracker.EntityFramework.csproj",
-              "RelativeToolTip": "FinanceTracker.EntityFramework\\FinanceTracker.EntityFramework.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-01-10T22:49:44.907Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "FinanceTracker.WPF\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\MainWindow.xaml*",
-              "RelativeToolTip": "FinanceTracker.WPF\\MainWindow.xaml*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-10T22:03:58.397Z",
+              "WhenOpened": "2025-01-11T21:15:52.054Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\App.xaml",
-              "RelativeDocumentMoniker": "FinanceTracker.WPF\\App.xaml",
-              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\App.xaml",
-              "RelativeToolTip": "FinanceTracker.WPF\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-10T22:03:55.268Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "BaseVM.cs",
-              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\ViewModels\\BaseVM.cs",
-              "RelativeDocumentMoniker": "FinanceTracker.WPF\\ViewModels\\BaseVM.cs",
-              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\ViewModels\\BaseVM.cs",
-              "RelativeToolTip": "FinanceTracker.WPF\\ViewModels\\BaseVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAUAAAAAAAAAA==",
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.WPF\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\MainWindow.xaml.cs",
+              "RelativeToolTip": "FinanceTracker.WPF\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAqwBcAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T22:02:30.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MainWindowVM.cs",
-              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\ViewModels\\MainWindowVM.cs",
-              "RelativeDocumentMoniker": "FinanceTracker.WPF\\ViewModels\\MainWindowVM.cs",
-              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\ViewModels\\MainWindowVM.cs",
-              "RelativeToolTip": "FinanceTracker.WPF\\ViewModels\\MainWindowVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T22:02:11.491Z",
+              "WhenOpened": "2025-01-11T21:37:57.502Z",
               "EditorCaption": ""
             },
             {
@@ -139,22 +105,123 @@
               "RelativeDocumentMoniker": "FinanceTracker.WPF\\App.xaml.cs",
               "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\App.xaml.cs",
               "RelativeToolTip": "FinanceTracker.WPF\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T22:01:06.953Z",
+              "WhenOpened": "2025-01-11T21:37:24.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CreateButton.xaml",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Controls\\CreateButton.xaml",
+              "RelativeDocumentMoniker": "FinanceTracker.WPF\\Controls\\CreateButton.xaml",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Controls\\CreateButton.xaml",
+              "RelativeToolTip": "FinanceTracker.WPF\\Controls\\CreateButton.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-11T21:15:59.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ButtonModule.xaml",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Controls\\ButtonModule.xaml",
+              "RelativeDocumentMoniker": "FinanceTracker.WPF\\Controls\\ButtonModule.xaml",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Controls\\ButtonModule.xaml*",
+              "RelativeToolTip": "FinanceTracker.WPF\\Controls\\ButtonModule.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-11T21:15:24.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpdateCurrentViewModelCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Commands\\UpdateCurrentViewModelCommand.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.WPF\\Commands\\UpdateCurrentViewModelCommand.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Commands\\UpdateCurrentViewModelCommand.cs",
+              "RelativeToolTip": "FinanceTracker.WPF\\Commands\\UpdateCurrentViewModelCommand.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAtwBwAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T21:08:25.093Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "FinanceTracker.WPF\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\MainWindow.xaml.cs",
-              "RelativeToolTip": "FinanceTracker.WPF\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAACAAAAAAAAAA==",
+              "Title": "MainVM.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\ViewModels\\MainVM.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.WPF\\ViewModels\\MainVM.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\ViewModels\\MainVM.cs",
+              "RelativeToolTip": "FinanceTracker.WPF\\ViewModels\\MainVM.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T22:29:41.42Z",
+              "WhenOpened": "2025-01-11T21:13:57.048Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "FinanceTracker.WPF\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\MainWindow.xaml",
+              "RelativeToolTip": "FinanceTracker.WPF\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-11T22:05:15.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ComboBoxNavigator.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Controls\\ComboBoxNavigator.xaml.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.WPF\\Controls\\ComboBoxNavigator.xaml.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Controls\\ComboBoxNavigator.xaml.cs",
+              "RelativeToolTip": "FinanceTracker.WPF\\Controls\\ComboBoxNavigator.xaml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAiwC4AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T21:39:25.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Navigator.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\State\\Navigator.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.WPF\\State\\Navigator.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\State\\Navigator.cs",
+              "RelativeToolTip": "FinanceTracker.WPF\\State\\Navigator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T21:06:58.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "INavigator.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\State\\INavigator.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.WPF\\State\\INavigator.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\State\\INavigator.cs",
+              "RelativeToolTip": "FinanceTracker.WPF\\State\\INavigator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T21:06:21.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HomeViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\ViewModels\\HomeViewModel.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.WPF\\ViewModels\\HomeViewModel.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\ViewModels\\HomeViewModel.cs",
+              "RelativeToolTip": "FinanceTracker.WPF\\ViewModels\\HomeViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T21:05:43.744Z",
               "EditorCaption": ""
             }
           ]

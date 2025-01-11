@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using FinanceTracker.WPF.ViewModels;
+using System.Collections.ObjectModel;
 using System.Globalization;
 using System.Text;
 using System.Windows;
@@ -21,48 +22,6 @@ namespace FinanceTracker.WPF
 		public MainWindow()
 		{
 			InitializeComponent();
-		}
-	}
-
-
-	public class MonthVM
-	{
-		public string DisplayDate { get; set; }
-		public bool IsCurrentMonth { get; set; }
-	}
-
-	public class MainWindowVM
-	{
-
-
-		public ObservableCollection<MonthVM> months;
-		public ObservableCollection<MonthVM> Months
-		{
-			get
-			{
-				return GenerateMonthList();
-			}
-		}
-
-		public static ObservableCollection<MonthVM> GenerateMonthList()
-		{
-			var months = new ObservableCollection<MonthVM>();
-			var currentYear = DateTime.Now.Year;
-			var currentMonth = DateTime.Now.Month;
-
-			for (int year = currentYear + 1; year >= currentYear - 1; year--)
-			{
-				for (int month = 12; month >= 1; month--)
-				{
-					months.Add(new MonthVM
-					{
-						DisplayDate = new DateTime(year, month, 1).ToString("MM-yyyy", CultureInfo.InvariantCulture),
-						IsCurrentMonth = year == currentYear && month == currentMonth
-					});
-				}
-			}
-
-			return months;
 		}
 	}
 }

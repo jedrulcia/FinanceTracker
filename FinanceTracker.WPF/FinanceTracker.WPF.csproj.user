@@ -7,12 +7,27 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Controls\ButtonModule.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\ComboBoxNavigator.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Controls\CreateButton.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Controls\ButtonModule.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\ComboBoxNavigator.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Controls\CreateButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Common.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">

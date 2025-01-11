@@ -19,7 +19,7 @@ namespace FinanceTracker.EntityFramework.Configurations
 				new OngoingExpenseTypes { Id = 3, Name = "Mieszkanie" },
 				new OngoingExpenseTypes { Id = 4, Name = "Rachunki" },
 				new OngoingExpenseTypes { Id = 5, Name = "Raty" },
-				new OngoingExpenseTypes { Id = 6, Name = " "}
+				new OngoingExpenseTypes { Id = 6, Name = "Inne"}
 				);
 		}
 	}

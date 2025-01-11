@@ -13,46 +13,56 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="12*"/>
-            <ColumnDefinition Width="22*"/>
-            <ColumnDefinition Width="22*"/>
-            <ColumnDefinition Width="22*"/>
-            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-
-        <!-- Lista MIESIAC/ROK -->
-        <Grid Grid.Row="0" Grid.Column="0" Grid.RowSpan="3">
-            <controls:CreateButton/>
+        <Grid Grid.Row="0" Grid.Column="0">
+            <controls:ButtonModule DataContext="{Binding Navigator}"/>
         </Grid>
 
-        <!-- WYKRES KOLOWY -->
+        <!-- MONTHLY SUMMARY -->
+        <Grid Grid.Row="1" Grid.Column="0">
+            
+        </Grid>
+
+        <!-- YEARLY SUMMARY -->
+        <Grid Grid.Row="2" Grid.Column="0">
+            
+        </Grid>
+
+        <!-- SALARY -->
         <Grid Grid.Row="0" Grid.Column="1">
+            
         </Grid>
 
-        <!-- WYKRES KOLOWY -->
-        <Grid Grid.Row="1" Grid.Column="1"></Grid>
+        <!-- PIE CHART -->
+        <Grid Grid.Row="1" Grid.Column="1">
+            
+        </Grid>
 
-        <!-- PODSUMOWANIE -->
-        <Grid Grid.Row="2" Grid.Column="1"></Grid>
-
-        <!-- AVERAGE -->
-        <Grid Grid.Row="0" Grid.Column="2"></Grid>
-
-        <!-- SALARIES -->
-        <Grid Grid.Row="1" Grid.Column="2"></Grid>
-
-        <!-- CHART -->
-        <Grid Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="3"></Grid>
+        <!-- BAR CHART -->
+        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
+            
+        </Grid>
 
         <!-- ONGOING EXPENSES -->
-        <Grid Grid.Row="0" Grid.Column="3" Grid.RowSpan="2"></Grid>
+        <Grid Grid.Row="0" Grid.Column="2" Grid.RowSpan="2">
+            
+        </Grid>
 
         <!-- OTHER EXPENSES -->
-        <Grid Grid.Row="0" Grid.Column="4"></Grid>
+        <Grid Grid.Row="0" Grid.Column="4">
+            
+        </Grid>
 
         <!-- OVERDUE PAYMENTS -->
-        <Grid Grid.Row="1" Grid.Column="4"></Grid>
+        <Grid Grid.Row="1" Grid.Column="4">
+            
+        </Grid>
     </Grid>
 </Window>

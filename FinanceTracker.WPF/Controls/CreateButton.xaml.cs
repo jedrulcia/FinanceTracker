@@ -15,14 +15,14 @@ using System.Windows.Shapes;
 
 namespace FinanceTracker.WPF.Controls
 {
-	/// <summary>
-	/// Logika interakcji dla klasy CreateButton.xaml
-	/// </summary>
-	public partial class CreateButton : UserControl
-	{
-		public CreateButton()
-		{
-			InitializeComponent();
-		}
-	}
+    /// <summary>
+    /// Logika interakcji dla klasy CreateButton.xaml
+    /// </summary>
+    public partial class CreateButton : UserControl
+    {
+        public CreateButton()
+        {
+            InitializeComponent();
+        }
+    }
 }

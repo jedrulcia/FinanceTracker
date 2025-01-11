@@ -67,7 +67,7 @@ namespace FinanceTracker.EntityFramework.Migrations
                         new
                         {
                             Id = 6,
-                            Name = " "
+                            Name = "Inne"
                         });
                 });
 

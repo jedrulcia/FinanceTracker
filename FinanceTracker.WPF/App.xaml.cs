@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using FinanceTracker.WPF.ViewModels;
+using System.Configuration;
 using System.Data;
 using System.Windows;
 
@@ -9,6 +10,7 @@ namespace FinanceTracker.WPF
 		protected override void OnStartup(StartupEventArgs e)
 		{
 			MainWindow window = new MainWindow();
+			window.DataContext = new MainVM();
 			window.Show();
 
 			base.OnStartup(e);
