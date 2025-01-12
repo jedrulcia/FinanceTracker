@@ -13,8 +13,4 @@
     <ProjectReference Include="..\FinanceTracker.EntityFramework\FinanceTracker.EntityFramework.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Views\" />
-  </ItemGroup>
-
 </Project>

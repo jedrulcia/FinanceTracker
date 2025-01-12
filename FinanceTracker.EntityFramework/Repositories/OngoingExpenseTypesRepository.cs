@@ -1,4 +1,4 @@
-﻿using FinanceTracker.Domain.Contracts;
+﻿using FinanceTracker.EntityFramework.Contracts;
 using FinanceTracker.Domain.Data;
 using System;
 using System.Collections.Generic;

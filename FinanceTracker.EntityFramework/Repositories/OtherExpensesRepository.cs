@@ -1,5 +1,4 @@
-﻿
-using FinanceTracker.Domain.Contracts;
+﻿using FinanceTracker.EntityFramework.Contracts;
 using FinanceTracker.Domain.Data;
 using Microsoft.EntityFrameworkCore;
 

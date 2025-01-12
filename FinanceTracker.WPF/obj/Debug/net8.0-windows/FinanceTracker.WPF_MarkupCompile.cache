@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\App.xaml
-5436075909
+2-453605790
 
-16690914599
+9-1973488296
 229480613385
-Controls\ButtonModule.xaml;Controls\ComboBoxNavigator.xaml;Controls\CreateButton.xaml;MainWindow.xaml;Styles\Common.xaml;
+Styles\Common.xaml;Views\MainWindow.xaml;
 
 False
 

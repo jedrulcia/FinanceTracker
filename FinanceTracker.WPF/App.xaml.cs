@@ -9,9 +9,8 @@ namespace FinanceTracker.WPF
 	{
 		protected override void OnStartup(StartupEventArgs e)
 		{
-			MainWindow window = new MainWindow();
-			window.DataContext = new MainVM();
-			window.Show();
+			MainWindow mainWindow = new MainWindow();
+			mainWindow.Show();
 
 			base.OnStartup(e);
 		}
