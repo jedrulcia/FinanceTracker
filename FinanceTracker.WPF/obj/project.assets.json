@@ -986,21 +986,10 @@
           }
         }
       },
-      "FinanceTracker.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/FinanceTracker.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/FinanceTracker.Domain.dll": {}
-        }
-      },
       "FinanceTracker.EntityFramework/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
-          "FinanceTracker.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "8.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.11"
         },
@@ -2732,11 +2721,6 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "FinanceTracker.Domain/1.0.0": {
-      "type": "project",
-      "path": "../FinanceTracker.Data/FinanceTracker.Domain.csproj",
-      "msbuildProject": "../FinanceTracker.Data/FinanceTracker.Domain.csproj"
-    },
     "FinanceTracker.EntityFramework/1.0.0": {
       "type": "project",
       "path": "../FinanceTracker.EntityFramework/FinanceTracker.EntityFramework.csproj",
@@ -2745,7 +2729,6 @@
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
-      "FinanceTracker.Domain >= 1.0.0",
       "FinanceTracker.EntityFramework >= 1.0.0"
     ]
   },
@@ -2782,9 +2765,6 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\FinanceTracker.Domain.csproj": {
-              "projectPath": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.Data\\FinanceTracker.Domain.csproj"
-            },
             "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.EntityFramework\\FinanceTracker.EntityFramework.csproj": {
               "projectPath": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.EntityFramework\\FinanceTracker.EntityFramework.csproj"
             }

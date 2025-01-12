@@ -15,8 +15,4 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\FinanceTracker.Data\FinanceTracker.Domain.csproj" />
-  </ItemGroup>
-
 </Project>

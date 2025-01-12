@@ -40,9 +40,7 @@ C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTr
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\bin\Debug\net8.0-windows\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\bin\Debug\net8.0-windows\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
-C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\bin\Debug\net8.0-windows\FinanceTracker.Domain.dll
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\bin\Debug\net8.0-windows\FinanceTracker.EntityFramework.dll
-C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\bin\Debug\net8.0-windows\FinanceTracker.Domain.pdb
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\bin\Debug\net8.0-windows\FinanceTracker.EntityFramework.pdb
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\FinanceTracker.WPF.csproj.AssemblyReference.cache
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\App.g.cs
