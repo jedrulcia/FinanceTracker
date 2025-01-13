@@ -4,6 +4,7 @@ using FinanceTracker.EntityFramework;
 using FinanceTracker.EntityFramework.Data;
 using FinanceTracker.WPF.ViewModels;
 using System.Collections.ObjectModel;
+using System.Globalization;
 
 namespace FinanceTracker.WPF.Repositories
 {
@@ -27,6 +28,28 @@ namespace FinanceTracker.WPF.Repositories
 			}
 
 			return listVM;
+		}
+
+
+		public (ObservableCollection<string> months, string selectedMonth) GenerateMonthList()
+		{
+			var months = new ObservableCollection<string>();
+
+			var currentYear = DateTime.Now.Year;
+			var currentMonth = DateTime.Now.Month;
+
+			var selectedMonth = DateTime.Now.ToString("MM-yyyy");
+
+			for (int year = currentYear + 1; year >= currentYear - 1; year--)
+			{
+				for (int month = 12; month >= 1; month--)
+				{
+					var newMonth = new DateTime(year, month, 1).ToString("MM-yyyy", CultureInfo.InvariantCulture);
+					months.Add((newMonth));
+				}
+			}
+
+			return (months, selectedMonth);
 		}
 	}
 }

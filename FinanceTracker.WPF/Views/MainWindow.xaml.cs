@@ -21,10 +21,5 @@ namespace FinanceTracker.WPF
 			await MainVM.InitializeAsync();
 			DataContext = MainVM;
 		}
-
-		private void ChangeView_Click(object sender, RoutedEventArgs e)
-		{
-
-		}
 	}
 }

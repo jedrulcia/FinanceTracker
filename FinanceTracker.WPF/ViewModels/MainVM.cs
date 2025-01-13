@@ -1,64 +1,85 @@
-﻿using FinanceTracker.EntityFramework;
-using FinanceTracker.WPF.Contracts;
-using FinanceTracker.WPF.Repositories;
-using Microsoft.EntityFrameworkCore;
+﻿using FinanceTracker.WPF.Contracts;
+using FinanceTracker.WPF.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
-namespace FinanceTracker.WPF.ViewModels
+public class MainVM : INotifyPropertyChanged
 {
 
-	public class MainVM
+	private readonly IServiceProvider serviceProvider;
+	private IOngoingExpensesRepository ongoingExpensesRepository { get; set; }
+	private IOtherExpensesRepository otherExpensesRepository { get; set; }
+
+	public MainVM(IServiceProvider serviceProvider)
 	{
-		private readonly IServiceProvider serviceProvider;
+		this.serviceProvider = serviceProvider;
+		this.ongoingExpensesRepository = serviceProvider.GetRequiredService<IOngoingExpensesRepository>();
+		this.otherExpensesRepository = serviceProvider.GetRequiredService<IOtherExpensesRepository>();
+	}
 
-		public ObservableCollection<string> Months { get; set; }
-		public string SelectedMonth { get; set; }
-		public List<OngoingExpensesVM> OngoingExpensesVMs { get; set; }
-		public ObservableCollection<OtherExpensesVM> OtherExpensesVMs { get; set; } = new ObservableCollection<OtherExpensesVM>();
-		private IOngoingExpensesRepository ongoingExpensesRepository {  get; set; }
-		private IOtherExpensesRepository otherExpensesRepository { get; set; }
-
-		public MainVM(IServiceProvider serviceProvider)
+	private string selectedMonth;
+	public string SelectedMonth
+	{
+		get => selectedMonth;
+		set
 		{
-			this.serviceProvider = serviceProvider;
-			this.ongoingExpensesRepository = serviceProvider.GetRequiredService<IOngoingExpensesRepository>();
-			this.otherExpensesRepository = serviceProvider.GetRequiredService<IOtherExpensesRepository>();
+			selectedMonth = value;
+			OnPropertyChanged();
+			_ = RefreshOtherExpensesAsync();
 		}
+	}
 
-		public async Task InitializeAsync()
+	private ObservableCollection<OtherExpensesVM> otherExpensesVMs;
+	public ObservableCollection<OtherExpensesVM> OtherExpensesVMs
+	{
+		get => otherExpensesVMs;
+		set
 		{
-			GenerateMonthList();
-			this.OngoingExpensesVMs = await ongoingExpensesRepository.GetOngoingExpensesVMAsync(SelectedMonth);
-			this.OtherExpensesVMs = await otherExpensesRepository.GetOtherExpensesVMAsync(SelectedMonth);
+			otherExpensesVMs = value;
+			OnPropertyChanged();
 		}
+	}
 
-		private void GenerateMonthList()
+	public ObservableCollection<string> Months { get; set; } = new ObservableCollection<string>();
+	public async Task InitializeAsync()
+	{
+		(var months, var selected) = otherExpensesRepository.GenerateMonthList();
+		foreach (var month in months)
 		{
-			var months = new ObservableCollection<string>();
+			Months.Add(month);
+		}
+		SelectedMonth = selected; // Wywoła automatyczne odświeżenie danych.
+		await RefreshOtherExpensesAsync().ConfigureAwait(false);
+	}
 
-			var currentYear = DateTime.Now.Year;
-			var currentMonth = DateTime.Now.Month;
+	private bool isBusy = false;
+	private async Task RefreshOtherExpensesAsync()
+	{
+		if (isBusy)
+			return;
 
-			this.SelectedMonth = DateTime.Now.ToString("MM-yyyy");
-
-			for (int year = currentYear + 1; year >= currentYear - 1; year--)
+		isBusy = true;
+		try
+		{
+			// Pobierz dane i przypisz do kolekcji
+			var expenses = await otherExpensesRepository.GetOtherExpensesVMAsync(SelectedMonth).ConfigureAwait(false);
+			OtherExpensesVMs = new ObservableCollection<OtherExpensesVM>();
+			foreach (var expense in expenses)
 			{
-				for (int month = 12; month >= 1; month--)
-				{
-					var newMonth = new DateTime(year, month, 1).ToString("MM-yyyy", CultureInfo.InvariantCulture);
-					months.Add((newMonth));
-				}
+				OtherExpensesVMs.Add(expense);
 			}
-
-			this.Months = months;
 		}
+		finally
+		{
+			isBusy = false; // Zakończono operację
+		}
+	}
+
+	public event PropertyChangedEventHandler PropertyChanged;
+	private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+	{
+		PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 	}
 }
