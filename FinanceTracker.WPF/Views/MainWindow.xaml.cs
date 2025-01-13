@@ -1,21 +1,25 @@
-﻿using FinanceTracker.WPF.ViewModels;
+﻿using FinanceTracker.WPF.Contracts;
+using FinanceTracker.WPF.ViewModels;
+using System.Diagnostics;
 using System.Windows;
 
 namespace FinanceTracker.WPF
 {
 	public partial class MainWindow : Window
 	{
-		public MainVM MainVM { get; set; } = new MainVM();
+		private readonly MainVM MainVM;
 
-		public MainWindow()
+		public MainWindow(MainVM mainVM)
 		{
 			InitializeComponent();
-			DataContext = this;
+			MainVM = mainVM;
+			DataContext = MainVM;
 		}
 
 		public async Task InitializeAsync()
 		{
 			await MainVM.InitializeAsync();
+			DataContext = MainVM;
 		}
 
 		private void ChangeView_Click(object sender, RoutedEventArgs e)

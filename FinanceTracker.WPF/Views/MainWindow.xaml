@@ -6,14 +6,14 @@
         xmlns:local="clr-namespace:FinanceTracker.WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="680" Width="1200">
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -40,8 +40,7 @@
 
                         <Grid Grid.Column="0">
                             <ComboBox Height="40" Width="130" Background="{StaticResource BrushNeutral}" HorizontalAlignment="Center" VerticalAlignment="Center"
-                      ItemsSource="{Binding MainVM.Months}"
-                      SelectedItem="{Binding MainVM.SelectedMonth}"/>
+                                ItemsSource="{Binding Months}" SelectedItem="{Binding SelectedMonth}"/>
                         </Grid>
 
                         <Grid Grid.Column="1">
@@ -69,42 +68,53 @@
 
         <!-- MONTHLY SUMMARY -->
         <Grid Grid.Row="1" Grid.Column="0">
-            
+
         </Grid>
 
         <!-- YEARLY SUMMARY -->
         <Grid Grid.Row="2" Grid.Column="0">
-            
+
         </Grid>
 
         <!-- SALARY -->
         <Grid Grid.Row="0" Grid.Column="1">
-            
+
         </Grid>
 
         <!-- PIE CHART -->
         <Grid Grid.Row="1" Grid.Column="1">
-            
+
         </Grid>
 
         <!-- BAR CHART -->
         <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
-            
+
         </Grid>
 
         <!-- ONGOING EXPENSES -->
         <Grid Grid.Row="0" Grid.Column="2" Grid.RowSpan="2">
-            
+
         </Grid>
 
         <!-- OTHER EXPENSES -->
         <Grid Grid.Row="0" Grid.Column="4">
-            
+            <Border Background="{StaticResource BrushSecondaryBackground}">
+                <ItemsControl ItemsSource="{Binding OtherExpensesVMs}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="5">
+                                <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="14" Margin="0,0,10,0" />
+                                <TextBlock Text="{Binding Value, StringFormat=C}" FontSize="14" Foreground="Green" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </Border>
         </Grid>
 
         <!-- OVERDUE PAYMENTS -->
         <Grid Grid.Row="1" Grid.Column="4">
-            
+
         </Grid>
     </Grid>
 </Window>

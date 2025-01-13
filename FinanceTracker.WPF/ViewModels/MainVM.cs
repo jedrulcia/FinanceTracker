@@ -2,6 +2,7 @@
 using FinanceTracker.WPF.Contracts;
 using FinanceTracker.WPF.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -16,22 +17,27 @@ namespace FinanceTracker.WPF.ViewModels
 
 	public class MainVM
 	{
+		private readonly IServiceProvider serviceProvider;
+
 		public ObservableCollection<string> Months { get; set; }
 		public string SelectedMonth { get; set; }
 		public List<OngoingExpensesVM> OngoingExpensesVMs { get; set; }
-		public List<OtherExpensesVM> OtherExpensesVMs { get; set; }
-		public List<SalaryVM> SalaryVMs { get; set; }
-		private IOngoingExpensesRepository _ongoingExpensesRepository { get; set; } // SETUP DEPENDENCY INJECTION
+		public ObservableCollection<OtherExpensesVM> OtherExpensesVMs { get; set; } = new ObservableCollection<OtherExpensesVM>();
+		private IOngoingExpensesRepository ongoingExpensesRepository {  get; set; }
+		private IOtherExpensesRepository otherExpensesRepository { get; set; }
 
-		public MainVM()
+		public MainVM(IServiceProvider serviceProvider)
 		{
+			this.serviceProvider = serviceProvider;
+			this.ongoingExpensesRepository = serviceProvider.GetRequiredService<IOngoingExpensesRepository>();
+			this.otherExpensesRepository = serviceProvider.GetRequiredService<IOtherExpensesRepository>();
 		}
 
 		public async Task InitializeAsync()
 		{
 			GenerateMonthList();
-			//OngoingExpensesVMs = await _ongoingExpensesRepository.GetOngoingExpensesVMAsync(SelectedMonth);
-			//Debug.WriteLine("");
+			this.OngoingExpensesVMs = await ongoingExpensesRepository.GetOngoingExpensesVMAsync(SelectedMonth);
+			this.OtherExpensesVMs = await otherExpensesRepository.GetOtherExpensesVMAsync(SelectedMonth);
 		}
 
 		private void GenerateMonthList()
@@ -41,7 +47,7 @@ namespace FinanceTracker.WPF.ViewModels
 			var currentYear = DateTime.Now.Year;
 			var currentMonth = DateTime.Now.Month;
 
-			SelectedMonth = DateTime.Now.ToString("MM-yyyy");
+			this.SelectedMonth = DateTime.Now.ToString("MM-yyyy");
 
 			for (int year = currentYear + 1; year >= currentYear - 1; year--)
 			{
@@ -52,7 +58,7 @@ namespace FinanceTracker.WPF.ViewModels
 				}
 			}
 
-			Months = months;
+			this.Months = months;
 		}
 	}
 }

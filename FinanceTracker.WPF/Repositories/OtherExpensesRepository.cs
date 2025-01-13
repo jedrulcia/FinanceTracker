@@ -2,6 +2,8 @@
 using Microsoft.EntityFrameworkCore;
 using FinanceTracker.EntityFramework;
 using FinanceTracker.EntityFramework.Data;
+using FinanceTracker.WPF.ViewModels;
+using System.Collections.ObjectModel;
 
 namespace FinanceTracker.WPF.Repositories
 {
@@ -12,6 +14,19 @@ namespace FinanceTracker.WPF.Repositories
 		public OtherExpensesRepository(FinanceTrackerDbContext context) : base(context)
 		{
 			this.context = context;
+		}
+
+		public async Task<ObservableCollection<OtherExpensesVM>> GetOtherExpensesVMAsync(string month)
+		{
+			List<OtherExpenses> list = (await GetAllAsync()).Where(x => x.Date.ToString("MM-yyyy") == month).ToList();
+			ObservableCollection<OtherExpensesVM> listVM = new ObservableCollection<OtherExpensesVM>();
+
+			foreach (var item in list)
+			{
+				listVM.Add(new OtherExpensesVM(item));
+			}
+
+			return listVM;
 		}
 	}
 }
