@@ -26,7 +26,6 @@ namespace FinanceTracker.WPF.Repositories
 			{
 				listVM.Add(new OtherExpensesVM(item));
 			}
-
 			return listVM;
 		}
 
