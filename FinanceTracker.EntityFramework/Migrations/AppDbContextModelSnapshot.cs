@@ -82,12 +82,12 @@ namespace FinanceTracker.EntityFramework.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("ExpenseTypeId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("OngoingExpenseTypeId")
-                        .HasColumnType("int");
 
                     b.Property<bool>("Paid")
                         .HasColumnType("bit");
@@ -111,12 +111,12 @@ namespace FinanceTracker.EntityFramework.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
+                    b.Property<int?>("ExpenseTypeId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("OngoingExpenseTypeId")
-                        .HasColumnType("int");
 
                     b.Property<bool>("Paid")
                         .HasColumnType("bit");

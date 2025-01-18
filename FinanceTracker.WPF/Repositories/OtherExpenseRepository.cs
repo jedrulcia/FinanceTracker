@@ -5,16 +5,19 @@ using FinanceTracker.EntityFramework.Data;
 using FinanceTracker.WPF.ViewModels;
 using System.Collections.ObjectModel;
 using System.Globalization;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace FinanceTracker.WPF.Repositories
 {
 	public class OtherExpenseRepository : GenericRepository<OtherExpense>, IOtherExpenseRepository
 	{
 		private readonly AppDbContext context;
+		private IExpenseTypeRepository ongoingExpenseTypesRepository;
 
-		public OtherExpenseRepository(AppDbContext context) : base(context)
+		public OtherExpenseRepository(AppDbContext context, IServiceProvider serviceProvider) : base(context)
 		{
 			this.context = context;
+			this.ongoingExpenseTypesRepository = serviceProvider.GetRequiredService<IExpenseTypeRepository>();
 		}
 
 		public async Task<ObservableCollection<OtherExpenseVM>> GetOtherExpensesVMAsync(string month)
@@ -24,7 +27,8 @@ namespace FinanceTracker.WPF.Repositories
 
 			foreach (var item in list)
 			{
-				listVM.Add(new OtherExpenseVM(item));
+				var type = await ongoingExpenseTypesRepository.GetAsync(item.ExpenseTypeId);
+				listVM.Add(new OtherExpenseVM(item, type));
 			}
 			return listVM;
 		}
@@ -37,7 +41,8 @@ namespace FinanceTracker.WPF.Repositories
 
 			foreach (var item in list)
 			{
-				listVM.Add(new OtherExpenseVM(item));
+				var type = await ongoingExpenseTypesRepository.GetAsync(item.ExpenseTypeId);
+				listVM.Add(new OtherExpenseVM(item, type));
 			}
 			return listVM;
 		}

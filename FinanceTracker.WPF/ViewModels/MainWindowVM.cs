@@ -7,6 +7,7 @@ using System.Runtime.CompilerServices;
 
 public class MainWindowVM : ObservableObject
 {
+	// Dependency injection through service provider
 	private IOngoingExpenseRepository ongoingExpensesRepository { get; set; }
 	private IOtherExpenseRepository otherExpensesRepository { get; set; }
 	private IUtilityRepository utilityRepository { get; set; }
@@ -18,6 +19,7 @@ public class MainWindowVM : ObservableObject
 		this.utilityRepository = serviceProvider.GetRequiredService<IUtilityRepository>();
 	}
 
+	// Properties
 	public ObservableCollection<string> Months { get; set; } = new ObservableCollection<string>();
 
 	private string selectedMonth;
@@ -28,17 +30,17 @@ public class MainWindowVM : ObservableObject
 		{
 			selectedMonth = value;
 			OnPropertyChanged();
-			_ = RefreshMainView();
+			_ = RefreshMainViewAsync();
 		}
 	}
 
-	private ObservableCollection<OtherExpenseVM> otherExpensesVMs;
-	public ObservableCollection<OtherExpenseVM> OtherExpensesVMs
+	private ObservableCollection<OtherExpenseVM> otherExpenseVMs;
+	public ObservableCollection<OtherExpenseVM> OtherExpenseVMs
 	{
-		get => otherExpensesVMs;
+		get => otherExpenseVMs;
 		set
 		{
-			otherExpensesVMs = value;
+			otherExpenseVMs = value;
 			OnPropertyChanged();
 		}
 	}
@@ -54,60 +56,39 @@ public class MainWindowVM : ObservableObject
 		}
 	}
 
-	private ObservableCollection<OtherExpenseVM> overdueOtherExpensesVMs;
-	public ObservableCollection<OtherExpenseVM> OverdueOtherExpensesVMs
+	private ObservableCollection<OverduePaymentVM> overduePaymentVMs;
+	public ObservableCollection<OverduePaymentVM> OverduePaymentVMs
 	{
-		get => overdueOtherExpensesVMs;
+		get => overduePaymentVMs;
 		set
 		{
-			overdueOtherExpensesVMs = value;
+			overduePaymentVMs = value;
 			OnPropertyChanged();
 		}
 	}
 
-	private ObservableCollection<OngoingExpenseVM> overdueOngoingExpensesVMs;
-	public ObservableCollection<OngoingExpenseVM> OverdueOngoingExpensesVMs
-	{
-		get => overdueOngoingExpensesVMs;
-		set
-		{
-			overdueOngoingExpensesVMs = value;
-			OnPropertyChanged();
-		}
-	}
-
+	// Initialize method
 	public async Task InitializeAsync()
 	{
-		(var months, var selected) = utilityRepository.GenerateMonthList();
-		foreach (var month in months)
-		{
-			Months.Add(month);
-		}
-		SelectedMonth = selected; // Wywoła automatyczne odświeżenie danych.
-		await RefreshMainView().ConfigureAwait(false);
+		(var months, SelectedMonth) = utilityRepository.GenerateMonthList();
+		foreach (var month in months) Months.Add(month);
+		await RefreshMainViewAsync().ConfigureAwait(false);
 	}
 
+	// Refresh method
 	private bool isBusy = false;
-	private async Task RefreshMainView()
+	private async Task RefreshMainViewAsync()
 	{
-		if (isBusy)
-			return;
-
+		if (isBusy) return;
 		isBusy = true;
+
 		try
 		{
-			OtherExpensesVMs = await otherExpensesRepository.GetOtherExpensesVMAsync(SelectedMonth).ConfigureAwait(false);
+			OtherExpenseVMs = await otherExpensesRepository.GetOtherExpensesVMAsync(SelectedMonth).ConfigureAwait(false);
 			OngoingExpensesVMs = await ongoingExpensesRepository.GetOngoingExpensesVMAsync(SelectedMonth).ConfigureAwait(false);
-			OverdueOngoingExpensesVMs = await ongoingExpensesRepository.GetOverdueOngoingExpensesVMAsync(SelectedMonth).ConfigureAwait(false);
-			OverdueOtherExpensesVMs = await otherExpensesRepository.GetOverdueOtherExpensesVMAsync(SelectedMonth).ConfigureAwait(false);
+			OverduePaymentVMs = await utilityRepository.GenerateOverduePaymentVMsAsync(SelectedMonth).ConfigureAwait(false);
 		}
-		catch
-		{
-
-		}
-		finally
-		{
-			isBusy = false;
-		}
+		catch { }
+		finally { isBusy = false; }
 	}
 }

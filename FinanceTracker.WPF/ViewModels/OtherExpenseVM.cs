@@ -11,14 +11,16 @@ namespace FinanceTracker.WPF.ViewModels
 	{
 		public int? Id { get; set; }
 		public string Name { get; set; }
+		public ExpenseTypeVM Type { get; set; }
 		public int Value { get; set; }
 		public DateTime Date { get; set; }
 		public bool Paid { get; set; }
 
-		public OtherExpenseVM(OtherExpense otherExpenses)
+		public OtherExpenseVM(OtherExpense otherExpenses, ExpenseType type)
 		{
 			this.Id = otherExpenses.Id;
 			this.Name = otherExpenses.Name;
+			this.Type = new ExpenseTypeVM(type);
 			this.Value = otherExpenses.Value;
 			this.Date = otherExpenses.Date;
 			this.Paid = otherExpenses.Paid;

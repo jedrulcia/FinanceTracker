@@ -26,7 +26,7 @@ namespace FinanceTracker.WPF.Repositories
 
 			foreach (var item in list)
 			{
-				var type = await ongoingExpenseTypesRepository.GetAsync(item.OngoingExpenseTypeId);
+				var type = await ongoingExpenseTypesRepository.GetAsync(item.ExpenseTypeId);
 				listVM.Add(new OngoingExpenseVM(item, type));
 			}
 			
@@ -41,7 +41,7 @@ namespace FinanceTracker.WPF.Repositories
 
 			foreach (var item in list)
 			{
-				var type = await ongoingExpenseTypesRepository.GetAsync(item.OngoingExpenseTypeId);
+				var type = await ongoingExpenseTypesRepository.GetAsync(item.ExpenseTypeId);
 				listVM.Add(new OngoingExpenseVM(item, type));
 			}
 
