@@ -11,12 +11,14 @@ public class MainWindowVM : ObservableObject
 	private IOngoingExpenseRepository ongoingExpensesRepository { get; set; }
 	private IOtherExpenseRepository otherExpensesRepository { get; set; }
 	private IUtilityRepository utilityRepository { get; set; }
+	private ISalaryRepository salaryRepository { get; set; }
 
 	public MainWindowVM(IServiceProvider serviceProvider)
 	{
 		this.ongoingExpensesRepository = serviceProvider.GetRequiredService<IOngoingExpenseRepository>();
 		this.otherExpensesRepository = serviceProvider.GetRequiredService<IOtherExpenseRepository>();
 		this.utilityRepository = serviceProvider.GetRequiredService<IUtilityRepository>();
+		this.salaryRepository = serviceProvider.GetRequiredService<ISalaryRepository>();
 	}
 
 	// Properties
@@ -67,6 +69,17 @@ public class MainWindowVM : ObservableObject
 		}
 	}
 
+	private ObservableCollection<SalaryVM> salaryVMs;
+	public ObservableCollection<SalaryVM> SalaryVMs
+	{
+		get => salaryVMs;
+		set
+		{
+			salaryVMs = value;
+			OnPropertyChanged();
+		}
+	}
+
 	// Initialize method
 	public async Task InitializeAsync()
 	{
@@ -84,9 +97,10 @@ public class MainWindowVM : ObservableObject
 
 		try
 		{
-			OtherExpenseVMs = await otherExpensesRepository.GetOtherExpensesVMAsync(SelectedMonth).ConfigureAwait(false);
-			OngoingExpensesVMs = await ongoingExpensesRepository.GetOngoingExpensesVMAsync(SelectedMonth).ConfigureAwait(false);
-			OverduePaymentVMs = await utilityRepository.GenerateOverduePaymentVMsAsync(SelectedMonth).ConfigureAwait(false);
+			OtherExpenseVMs = await otherExpensesRepository.GetOtherExpenseVMsAsync(SelectedMonth).ConfigureAwait(false);
+			OngoingExpensesVMs = await ongoingExpensesRepository.GetOngoingExpenseVMsAsync(SelectedMonth).ConfigureAwait(false);
+			OverduePaymentVMs = await utilityRepository.GetOverduePaymentVMsAsync(SelectedMonth).ConfigureAwait(false);
+			SalaryVMs = await salaryRepository.GetSalaryVMsAsync(SelectedMonth).ConfigureAwait(false);
 		}
 		catch { }
 		finally { isBusy = false; }

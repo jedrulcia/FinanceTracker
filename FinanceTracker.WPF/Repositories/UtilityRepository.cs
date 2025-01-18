@@ -47,7 +47,7 @@ namespace FinanceTracker.WPF.Repositories
 			return (months, selectedMonth);
 		}
 
-		public async Task<ObservableCollection<OverduePaymentVM>> GenerateOverduePaymentVMsAsync(string month)
+		public async Task<ObservableCollection<OverduePaymentVM>> GetOverduePaymentVMsAsync(string month)
 		{
 			var targetDate = DateTime.ParseExact(month, "MM-yyyy", null);
 			ObservableCollection<OverduePaymentVM> listVM = new ObservableCollection<OverduePaymentVM>();

@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\viewmodels\\mainwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\viewmodels\\mainwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\repositories\\utilityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\repositories\\utilityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\contracts\\iutilityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\contracts\\iutilityrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\viewmodels\\mainwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\viewmodels\\mainwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\viewmodels\\overduepaymentvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\viewmodels\\overduepaymentvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\repositories\\ongoingexpenserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\repositories\\ongoingexpenserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 215,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,20 +46,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IUtilityRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Contracts\\IUtilityRepository.cs",
-              "RelativeDocumentMoniker": "FinanceTracker.WPF\\Contracts\\IUtilityRepository.cs",
-              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Contracts\\IUtilityRepository.cs",
-              "RelativeToolTip": "FinanceTracker.WPF\\Contracts\\IUtilityRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "UtilityRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Repositories\\UtilityRepository.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.WPF\\Repositories\\UtilityRepository.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Repositories\\UtilityRepository.cs",
+              "RelativeToolTip": "FinanceTracker.WPF\\Repositories\\UtilityRepository.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowEYAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-18T22:57:28.473Z",
+              "WhenOpened": "2025-01-18T23:44:58.089Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "OngoingExpenseRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Repositories\\OngoingExpenseRepository.cs",
+              "RelativeDocumentMoniker": "FinanceTracker.WPF\\Repositories\\OngoingExpenseRepository.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Repositories\\OngoingExpenseRepository.cs",
+              "RelativeToolTip": "FinanceTracker.WPF\\Repositories\\OngoingExpenseRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-18T23:41:59.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Views\\MainWindow.xaml",
               "RelativeDocumentMoniker": "FinanceTracker.WPF\\Views\\MainWindow.xaml",
@@ -75,41 +84,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "MainWindowVM.cs",
               "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\ViewModels\\MainWindowVM.cs",
               "RelativeDocumentMoniker": "FinanceTracker.WPF\\ViewModels\\MainWindowVM.cs",
               "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\ViewModels\\MainWindowVM.cs",
               "RelativeToolTip": "FinanceTracker.WPF\\ViewModels\\MainWindowVM.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAAwE0AAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAkwE8AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-18T22:55:01.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OverduePaymentVM.cs",
-              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\ViewModels\\OverduePaymentVM.cs",
-              "RelativeDocumentMoniker": "FinanceTracker.WPF\\ViewModels\\OverduePaymentVM.cs",
-              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\ViewModels\\OverduePaymentVM.cs",
-              "RelativeToolTip": "FinanceTracker.WPF\\ViewModels\\OverduePaymentVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-18T22:51:48.648Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UtilityRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Repositories\\UtilityRepository.cs",
-              "RelativeDocumentMoniker": "FinanceTracker.WPF\\Repositories\\UtilityRepository.cs",
-              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Repositories\\UtilityRepository.cs",
-              "RelativeToolTip": "FinanceTracker.WPF\\Repositories\\UtilityRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-18T22:27:22.971Z",
               "EditorCaption": ""
             }
           ]

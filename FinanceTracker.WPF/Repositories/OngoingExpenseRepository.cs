@@ -19,7 +19,7 @@ namespace FinanceTracker.WPF.Repositories
 			this.ongoingExpenseTypesRepository = serviceProvider.GetRequiredService<IExpenseTypeRepository>();
 		}
 
-		public async Task<ObservableCollection<OngoingExpenseVM>> GetOngoingExpensesVMAsync(string month)
+		public async Task<ObservableCollection<OngoingExpenseVM>> GetOngoingExpenseVMsAsync(string month)
 		{
 			List<OngoingExpense> list = (await GetAllAsync()).Where(x => x.Date.ToString("MM-yyyy") == month).ToList();
 			ObservableCollection<OngoingExpenseVM> listVM = new ObservableCollection<OngoingExpenseVM>();
@@ -30,21 +30,6 @@ namespace FinanceTracker.WPF.Repositories
 				listVM.Add(new OngoingExpenseVM(item, type));
 			}
 			
-			return listVM;
-		}
-
-		public async Task<ObservableCollection<OngoingExpenseVM>> GetOverdueOngoingExpensesVMAsync(string month)
-		{
-			var targetDate = DateTime.ParseExact(month, "MM-yyyy", null);
-			List<OngoingExpense> list = (await GetAllAsync()).Where(x => x.Date < targetDate).ToList();
-			ObservableCollection<OngoingExpenseVM> listVM = new ObservableCollection<OngoingExpenseVM>();
-
-			foreach (var item in list)
-			{
-				var type = await ongoingExpenseTypesRepository.GetAsync(item.ExpenseTypeId);
-				listVM.Add(new OngoingExpenseVM(item, type));
-			}
-
 			return listVM;
 		}
 	}
