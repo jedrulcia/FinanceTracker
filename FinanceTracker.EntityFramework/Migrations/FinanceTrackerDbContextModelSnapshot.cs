@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FinanceTracker.EntityFramework.Migrations
 {
-    [DbContext(typeof(FinanceTrackerDbContext))]
+    [DbContext(typeof(AppDbContext))]
     partial class FinanceTrackerDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

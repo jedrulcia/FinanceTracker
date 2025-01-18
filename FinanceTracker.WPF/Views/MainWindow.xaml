@@ -82,6 +82,18 @@
 
         <!-- ONGOING EXPENSES -->
         <Grid Grid.Row="0" Grid.Column="2" Grid.RowSpan="2">
+            <Border Background="{StaticResource BrushSecondaryBackground}">
+                <ListBox ItemsSource="{Binding OngoingExpensesVMs}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <TextBlock Text="{Binding Name}"/>
+                                <TextBlock Text="{Binding Value}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </Border>
         </Grid>
 
         <!-- OTHER EXPENSES -->

@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace FinanceTracker.EntityFramework
 {
-	public  class FinanceTrackerDbContext : DbContext
+	public  class AppDbContext : DbContext
 	{
-		public FinanceTrackerDbContext(DbContextOptions options) : base(options) { }
+		public AppDbContext(DbContextOptions options) : base(options) { }
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
 			modelBuilder.ApplyConfiguration(new OngoingExpenseTypesSeedConfiguration());
@@ -23,6 +23,5 @@ namespace FinanceTracker.EntityFramework
 		DbSet<OngoingExpenses> OngoingExpenses { get; set; }
 		DbSet<OtherExpenses> OtherExpenses { get; set; }
 		DbSet<OngoingExpenseTypes> OngoingExpenseTypes { get; set; }
-
 	}
 }

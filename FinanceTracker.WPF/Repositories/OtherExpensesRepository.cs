@@ -10,9 +10,9 @@ namespace FinanceTracker.WPF.Repositories
 {
 	public class OtherExpensesRepository : GenericRepository<OtherExpenses>, IOtherExpensesRepository
 	{
-		private readonly FinanceTrackerDbContext context;
+		private readonly AppDbContext context;
 
-		public OtherExpensesRepository(FinanceTrackerDbContext context) : base(context)
+		public OtherExpensesRepository(AppDbContext context) : base(context)
 		{
 			this.context = context;
 		}
@@ -29,26 +29,5 @@ namespace FinanceTracker.WPF.Repositories
 			return listVM;
 		}
 
-
-		public (ObservableCollection<string> months, string selectedMonth) GenerateMonthList()
-		{
-			var months = new ObservableCollection<string>();
-
-			var currentYear = DateTime.Now.Year;
-			var currentMonth = DateTime.Now.Month;
-
-			var selectedMonth = DateTime.Now.ToString("MM-yyyy");
-
-			for (int year = currentYear + 1; year >= currentYear - 1; year--)
-			{
-				for (int month = 12; month >= 1; month--)
-				{
-					var newMonth = new DateTime(year, month, 1).ToString("MM-yyyy", CultureInfo.InvariantCulture);
-					months.Add((newMonth));
-				}
-			}
-
-			return (months, selectedMonth);
-		}
 	}
 }

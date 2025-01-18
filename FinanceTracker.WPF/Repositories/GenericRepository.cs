@@ -7,9 +7,9 @@ namespace FinanceTracker.WPF.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
-        private readonly FinanceTrackerDbContext context;
+        private readonly AppDbContext context;
 
-        public GenericRepository(FinanceTrackerDbContext context)
+        public GenericRepository(AppDbContext context)
         {
             this.context = context;
         }

@@ -5,19 +5,20 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-public class MainVM : INotifyPropertyChanged
+public class MainVM : ObservableObject
 {
-
-	private readonly IServiceProvider serviceProvider;
 	private IOngoingExpensesRepository ongoingExpensesRepository { get; set; }
 	private IOtherExpensesRepository otherExpensesRepository { get; set; }
+	private IUtilityRepository utilityRepository { get; set; }
 
 	public MainVM(IServiceProvider serviceProvider)
 	{
-		this.serviceProvider = serviceProvider;
 		this.ongoingExpensesRepository = serviceProvider.GetRequiredService<IOngoingExpensesRepository>();
 		this.otherExpensesRepository = serviceProvider.GetRequiredService<IOtherExpensesRepository>();
+		this.utilityRepository = serviceProvider.GetRequiredService<IUtilityRepository>();
 	}
+
+	public ObservableCollection<string> Months { get; set; } = new ObservableCollection<string>();
 
 	private string selectedMonth;
 	public string SelectedMonth
@@ -27,7 +28,7 @@ public class MainVM : INotifyPropertyChanged
 		{
 			selectedMonth = value;
 			OnPropertyChanged();
-			_ = RefreshOtherExpensesAsync();
+			_ = RefreshMainView();
 		}
 	}
 
@@ -42,20 +43,30 @@ public class MainVM : INotifyPropertyChanged
 		}
 	}
 
-	public ObservableCollection<string> Months { get; set; } = new ObservableCollection<string>();
+	private ObservableCollection<OngoingExpensesVM> ongoingExpensesVMs;
+	public ObservableCollection<OngoingExpensesVM> OngoingExpensesVMs
+	{
+		get => ongoingExpensesVMs;
+		set
+		{
+			ongoingExpensesVMs = value;
+			OnPropertyChanged();
+		}
+	}
+
 	public async Task InitializeAsync()
 	{
-		(var months, var selected) = otherExpensesRepository.GenerateMonthList();
+		(var months, var selected) = utilityRepository.GenerateMonthList();
 		foreach (var month in months)
 		{
 			Months.Add(month);
 		}
 		SelectedMonth = selected; // Wywoła automatyczne odświeżenie danych.
-		await RefreshOtherExpensesAsync().ConfigureAwait(false);
+		await RefreshMainView().ConfigureAwait(false);
 	}
 
 	private bool isBusy = false;
-	private async Task RefreshOtherExpensesAsync()
+	private async Task RefreshMainView()
 	{
 		if (isBusy)
 			return;
@@ -63,23 +74,12 @@ public class MainVM : INotifyPropertyChanged
 		isBusy = true;
 		try
 		{
-			// Pobierz dane i przypisz do kolekcji
-			var expenses = await otherExpensesRepository.GetOtherExpensesVMAsync(SelectedMonth).ConfigureAwait(false);
-			OtherExpensesVMs = new ObservableCollection<OtherExpensesVM>();
-			foreach (var expense in expenses)
-			{
-				OtherExpensesVMs.Add(expense);
-			}
+			OtherExpensesVMs = await otherExpensesRepository.GetOtherExpensesVMAsync(SelectedMonth).ConfigureAwait(false);
+			OngoingExpensesVMs = await ongoingExpensesRepository.GetOngoingExpensesVMAsync(SelectedMonth).ConfigureAwait(false);
 		}
 		finally
 		{
-			isBusy = false; // Zakończono operację
+			isBusy = false;
 		}
-	}
-
-	public event PropertyChangedEventHandler PropertyChanged;
-	private void OnPropertyChanged([CallerMemberName] string propertyName = null)
-	{
-		PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 	}
 }

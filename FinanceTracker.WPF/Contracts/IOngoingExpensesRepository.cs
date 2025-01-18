@@ -1,10 +1,11 @@
 ﻿using FinanceTracker.EntityFramework.Data;
 using FinanceTracker.WPF.ViewModels;
+using System.Collections.ObjectModel;
 
 namespace FinanceTracker.WPF.Contracts
 {
 	public interface IOngoingExpensesRepository : IGenericRepository<OngoingExpenses>
 	{
-		Task<List<OngoingExpensesVM>> GetOngoingExpensesVMAsync(string month);
+		Task<ObservableCollection<OngoingExpensesVM>> GetOngoingExpensesVMAsync(string month);
 	}
 }

@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace FinanceTracker.EntityFramework.Migrations
 {
-    [DbContext(typeof(FinanceTrackerDbContext))]
+    [DbContext(typeof(AppDbContext))]
     [Migration("20250110225855_seedconfiguration")]
     partial class seedconfiguration
     {

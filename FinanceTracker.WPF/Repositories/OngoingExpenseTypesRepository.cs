@@ -2,16 +2,23 @@
 using Microsoft.EntityFrameworkCore;
 using FinanceTracker.EntityFramework;
 using FinanceTracker.EntityFramework.Data;
+using FinanceTracker.WPF.ViewModels;
 
 namespace FinanceTracker.WPF.Repositories
 {
 	public class OngoingExpenseTypesRepository : GenericRepository<OngoingExpenseTypes>, IOngoingExpenseTypesRepository
 	{
-		private readonly FinanceTrackerDbContext context;
+		private readonly AppDbContext context;
 
-		public OngoingExpenseTypesRepository(FinanceTrackerDbContext context) : base(context)
+		public OngoingExpenseTypesRepository(AppDbContext context) : base(context)
 		{
 			this.context = context;
+		}
+
+		public async Task<OngoingExpenseTypesVM> GetOngoingExpenseTypeVM(int id)
+		{
+			var type = await GetAsync(id);
+			return new OngoingExpenseTypesVM(type);
 		}
 	}
 }

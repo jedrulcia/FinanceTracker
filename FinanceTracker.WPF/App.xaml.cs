@@ -29,7 +29,7 @@ namespace FinanceTracker.WPF
 		{
 			IServiceCollection services = new ServiceCollection();
 
-			services.AddDbContext<FinanceTrackerDbContext>(options =>
+			services.AddDbContext<AppDbContext>(options =>
 			options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=FinanceTracker;Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=False"));
 
 			services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
@@ -37,6 +37,7 @@ namespace FinanceTracker.WPF
 			services.AddScoped<IOngoingExpenseTypesRepository, OngoingExpenseTypesRepository>();
 			services.AddScoped<ISalaryRepository, SalaryRepository>();
 			services.AddScoped<IOtherExpensesRepository, OtherExpensesRepository>();
+			services.AddScoped<IUtilityRepository, UtilityRepository>();
 
 			services.AddScoped<MainVM>();
 

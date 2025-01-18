@@ -3,23 +3,26 @@ using Microsoft.EntityFrameworkCore;
 using FinanceTracker.EntityFramework;
 using FinanceTracker.EntityFramework.Data;
 using FinanceTracker.WPF.ViewModels;
+using System.Collections.ObjectModel;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace FinanceTracker.WPF.Repositories
 {
 	public class OngoingExpensesRepository : GenericRepository<OngoingExpenses>, IOngoingExpensesRepository
 	{
-		private readonly FinanceTrackerDbContext context;
+		private readonly AppDbContext context;
 		private IOngoingExpenseTypesRepository ongoingExpenseTypesRepository;
 
-		public OngoingExpensesRepository(FinanceTrackerDbContext context) : base(context)
+		public OngoingExpensesRepository(AppDbContext context, IServiceProvider serviceProvider) : base(context)
 		{
 			this.context = context;
+			this.ongoingExpenseTypesRepository = serviceProvider.GetRequiredService<IOngoingExpenseTypesRepository>();
 		}
 
-		public async Task<List<OngoingExpensesVM>> GetOngoingExpensesVMAsync(string month)
+		public async Task<ObservableCollection<OngoingExpensesVM>> GetOngoingExpensesVMAsync(string month)
 		{
 			List<OngoingExpenses> list = (await GetAllAsync()).Where(x => x.Date.ToString("MM-yyyy") == month).ToList();
-			List<OngoingExpensesVM> listVM = new List<OngoingExpensesVM>();
+			ObservableCollection<OngoingExpensesVM> listVM = new ObservableCollection<OngoingExpensesVM>();
 
 			foreach (var item in list)
 			{

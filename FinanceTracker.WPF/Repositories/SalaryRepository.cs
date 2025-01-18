@@ -7,9 +7,9 @@ namespace FinanceTracker.WPF.Repositories
 {
 	public class SalaryRepository : GenericRepository<Salary>, ISalaryRepository
 	{
-		private readonly FinanceTrackerDbContext context;
+		private readonly AppDbContext context;
 
-		public SalaryRepository(FinanceTrackerDbContext context) : base(context)
+		public SalaryRepository(AppDbContext context) : base(context)
 		{
 			this.context = context;
 		}
