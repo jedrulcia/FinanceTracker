@@ -7,5 +7,6 @@ namespace FinanceTracker.WPF.Contracts
 	public interface IOngoingExpensesRepository : IGenericRepository<OngoingExpenses>
 	{
 		Task<ObservableCollection<OngoingExpensesVM>> GetOngoingExpensesVMAsync(string month);
+		Task<ObservableCollection<OngoingExpensesVM>> GetOverdueOngoingExpensesVMAsync(string month);
 	}
 }

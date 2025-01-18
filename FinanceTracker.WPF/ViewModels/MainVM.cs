@@ -54,6 +54,28 @@ public class MainVM : ObservableObject
 		}
 	}
 
+	private ObservableCollection<OtherExpensesVM> overdueOtherExpensesVMs;
+	public ObservableCollection<OtherExpensesVM> OverdueOtherExpensesVMs
+	{
+		get => overdueOtherExpensesVMs;
+		set
+		{
+			overdueOtherExpensesVMs = value;
+			OnPropertyChanged();
+		}
+	}
+
+	private ObservableCollection<OngoingExpensesVM> overdueOngoingExpensesVMs;
+	public ObservableCollection<OngoingExpensesVM> OverdueOngoingExpensesVMs
+	{
+		get => overdueOngoingExpensesVMs;
+		set
+		{
+			overdueOngoingExpensesVMs = value;
+			OnPropertyChanged();
+		}
+	}
+
 	public async Task InitializeAsync()
 	{
 		(var months, var selected) = utilityRepository.GenerateMonthList();
@@ -76,6 +98,12 @@ public class MainVM : ObservableObject
 		{
 			OtherExpensesVMs = await otherExpensesRepository.GetOtherExpensesVMAsync(SelectedMonth).ConfigureAwait(false);
 			OngoingExpensesVMs = await ongoingExpensesRepository.GetOngoingExpensesVMAsync(SelectedMonth).ConfigureAwait(false);
+			OverdueOngoingExpensesVMs = await ongoingExpensesRepository.GetOverdueOngoingExpensesVMAsync(SelectedMonth).ConfigureAwait(false);
+			OverdueOtherExpensesVMs = await otherExpensesRepository.GetOverdueOtherExpensesVMAsync(SelectedMonth).ConfigureAwait(false);
+		}
+		catch
+		{
+
 		}
 		finally
 		{

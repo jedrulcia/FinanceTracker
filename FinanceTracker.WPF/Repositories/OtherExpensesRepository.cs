@@ -29,5 +29,18 @@ namespace FinanceTracker.WPF.Repositories
 			return listVM;
 		}
 
+		public async Task<ObservableCollection<OtherExpensesVM>> GetOverdueOtherExpensesVMAsync(string month)
+		{
+			var targetDate = DateTime.ParseExact(month, "MM-yyyy", null);
+			List<OtherExpenses> list = (await GetAllAsync()).Where(x => x.Date < targetDate && x.Paid == false).ToList();
+			ObservableCollection<OtherExpensesVM> listVM = new ObservableCollection<OtherExpensesVM>();
+
+			foreach (var item in list)
+			{
+				listVM.Add(new OtherExpensesVM(item));
+			}
+			return listVM;
+		}
+
 	}
 }

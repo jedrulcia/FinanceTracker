@@ -114,7 +114,38 @@
 
         <!-- OVERDUE PAYMENTS -->
         <Grid Grid.Row="1" Grid.Column="4">
-
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Border Background="{StaticResource BrushSecondaryBackground}">
+                    <ListBox ItemsSource="{Binding OverdueOngoingExpensesVMs}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Name}"/>
+                                    <TextBlock Text="{Binding Value}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Border>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Border Background="{StaticResource BrushSecondaryBackground}">
+                    <ListBox ItemsSource="{Binding OverdueOtherExpensesVMs}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Name}"/>
+                                    <TextBlock Text="{Binding Value}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Border>
+            </Grid>
         </Grid>
     </Grid>
 </Window>
