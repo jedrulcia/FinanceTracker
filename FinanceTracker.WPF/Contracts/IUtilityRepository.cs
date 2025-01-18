@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FinanceTracker.WPF.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace FinanceTracker.WPF.Contracts
 	public interface IUtilityRepository
 	{
 		public (ObservableCollection<string> months, string selectedMonth) GenerateMonthList();
+		//Task<ObservableCollection<OverduePaymentVM>> GenerateOverduePaymentListAsync(string month);
 	}
 }

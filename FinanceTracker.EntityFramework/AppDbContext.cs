@@ -14,14 +14,14 @@ namespace FinanceTracker.EntityFramework
 		public AppDbContext(DbContextOptions options) : base(options) { }
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
-			modelBuilder.ApplyConfiguration(new OngoingExpenseTypesSeedConfiguration());
+			modelBuilder.ApplyConfiguration(new ExpenseTypeSeedConfiguration());
 
 			base.OnModelCreating(modelBuilder);
 		}
 
-		DbSet<Salary> Salary { get; set; }
-		DbSet<OngoingExpenses> OngoingExpenses { get; set; }
-		DbSet<OtherExpenses> OtherExpenses { get; set; }
-		DbSet<OngoingExpenseTypes> OngoingExpenseTypes { get; set; }
+		DbSet<Salary> Salaries { get; set; }
+		DbSet<OngoingExpense> OngoingExpenses { get; set; }
+		DbSet<OtherExpense> OtherExpenses { get; set; }
+		DbSet<ExpenseType> ExpenseTypes { get; set; }
 	}
 }

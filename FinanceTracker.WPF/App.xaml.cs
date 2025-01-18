@@ -33,15 +33,15 @@ namespace FinanceTracker.WPF
 			options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=FinanceTracker;Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=False"));
 
 			services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-			services.AddScoped<IOngoingExpensesRepository, OngoingExpensesRepository>();
-			services.AddScoped<IOngoingExpenseTypesRepository, OngoingExpenseTypesRepository>();
+			services.AddScoped<IOngoingExpenseRepository, OngoingExpenseRepository>();
+			services.AddScoped<IExpenseTypeRepository, ExpenseTypeRepository>();
 			services.AddScoped<ISalaryRepository, SalaryRepository>();
-			services.AddScoped<IOtherExpensesRepository, OtherExpensesRepository>();
+			services.AddScoped<IOtherExpenseRepository, OtherExpenseRepository>();
 			services.AddScoped<IUtilityRepository, UtilityRepository>();
 
-			services.AddScoped<MainVM>();
+			services.AddScoped<MainWindowVM>();
 
-			services.AddScoped<MainWindow>(s => new MainWindow(s.GetRequiredService<MainVM>()));
+			services.AddScoped<MainWindow>(s => new MainWindow(s.GetRequiredService<MainWindowVM>()));
 
 			return services.BuildServiceProvider();
 		}

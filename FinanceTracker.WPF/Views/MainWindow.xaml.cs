@@ -7,19 +7,19 @@ namespace FinanceTracker.WPF
 {
 	public partial class MainWindow : Window
 	{
-		private readonly MainVM MainVM;
+		private readonly MainWindowVM MainWindowVM;
 
-		public MainWindow(MainVM mainVM)
+		public MainWindow(MainWindowVM mainVM)
 		{
 			InitializeComponent();
-			MainVM = mainVM;
-			DataContext = MainVM;
+			MainWindowVM = mainVM;
+			DataContext = MainWindowVM;
 		}
 
 		public async Task InitializeAsync()
 		{
-			await MainVM.InitializeAsync();
-			DataContext = MainVM;
+			await MainWindowVM.InitializeAsync();
+			DataContext = MainWindowVM;
 		}
 	}
 }
