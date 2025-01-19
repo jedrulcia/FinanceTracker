@@ -47,13 +47,13 @@ public class MainWindowVM : ObservableObject
 		}
 	}
 
-	private ObservableCollection<OngoingExpenseVM> ongoingExpensesVMs;
-	public ObservableCollection<OngoingExpenseVM> OngoingExpensesVMs
+	private ObservableCollection<OngoingExpenseVM> ongoingExpenseVMs;
+	public ObservableCollection<OngoingExpenseVM> OngoingExpenseVMs
 	{
-		get => ongoingExpensesVMs;
+		get => ongoingExpenseVMs;
 		set
 		{
-			ongoingExpensesVMs = value;
+			ongoingExpenseVMs = value;
 			OnPropertyChanged();
 		}
 	}
@@ -80,6 +80,28 @@ public class MainWindowVM : ObservableObject
 		}
 	}
 
+	private SummaryVM monthlySummaryVM;
+	public SummaryVM MonthlySummaryVM
+	{
+		get => monthlySummaryVM;
+		set
+		{
+			monthlySummaryVM = value;
+			OnPropertyChanged();
+		}
+	}
+
+	private SummaryVM yearlySummaryVM;
+	public SummaryVM YearlySummaryVM
+	{
+		get => yearlySummaryVM;
+		set
+		{
+			yearlySummaryVM = value;
+			OnPropertyChanged();
+		}
+	}
+
 	// Initialize method
 	public async Task InitializeAsync()
 	{
@@ -98,9 +120,11 @@ public class MainWindowVM : ObservableObject
 		try
 		{
 			OtherExpenseVMs = await otherExpensesRepository.GetOtherExpenseVMsAsync(SelectedMonth).ConfigureAwait(false);
-			OngoingExpensesVMs = await ongoingExpensesRepository.GetOngoingExpenseVMsAsync(SelectedMonth).ConfigureAwait(false);
+			OngoingExpenseVMs = await ongoingExpensesRepository.GetOngoingExpenseVMsAsync(SelectedMonth).ConfigureAwait(false);
 			OverduePaymentVMs = await utilityRepository.GetOverduePaymentVMsAsync(SelectedMonth).ConfigureAwait(false);
 			SalaryVMs = await salaryRepository.GetSalaryVMsAsync(SelectedMonth).ConfigureAwait(false);
+			MonthlySummaryVM = await utilityRepository.GetMonthlySummaryVMAsync(SelectedMonth).ConfigureAwait(false);
+			YearlySummaryVM = await utilityRepository.GetYearlySummaryVMAsync(SelectedMonth).ConfigureAwait(false);
 		}
 		catch { }
 		finally { isBusy = false; }

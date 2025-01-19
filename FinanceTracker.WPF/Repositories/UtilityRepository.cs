@@ -10,6 +10,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 
 namespace FinanceTracker.WPF.Repositories
 {
@@ -18,12 +19,14 @@ namespace FinanceTracker.WPF.Repositories
 		private IOngoingExpenseRepository ongoingExpenseRepository;
 		private IOtherExpenseRepository otherExpenseRepository;
 		private IExpenseTypeRepository expenseTypeRepository;
+		private ISalaryRepository salaryRepository;
 
 		public UtilityRepository(IServiceProvider serviceProvider)
 		{
 			this.ongoingExpenseRepository = serviceProvider.GetRequiredService<IOngoingExpenseRepository>();
 			this.otherExpenseRepository = serviceProvider.GetRequiredService<IOtherExpenseRepository>();
 			this.expenseTypeRepository = serviceProvider.GetRequiredService<IExpenseTypeRepository>();
+			this.salaryRepository = serviceProvider.GetRequiredService<ISalaryRepository>();
 		}
 
 		public (ObservableCollection<string> months, string selectedMonth) GenerateMonthList()
@@ -67,6 +70,46 @@ namespace FinanceTracker.WPF.Repositories
 			}
 
 			return listVM;
+		}
+
+		public async Task<SummaryVM> GetMonthlySummaryVMAsync(string month)
+		{
+			int charges = (await ongoingExpenseRepository.GetAllAsync())
+				.Where(x => x.Date.ToString("MM-yyyy") == month)
+				.Sum(x => x.Value);
+
+			charges += (await otherExpenseRepository.GetAllAsync())
+				.Where(x => x.Date.ToString("MM-yyyy") == month)
+				.Sum(x => x.Value);
+
+			int credits = (await salaryRepository.GetAllAsync())
+				.Where(x => x.Date.ToString("MM-yyyy") == month)
+				.Sum(x => x.Value);
+
+			int balance = credits - charges;
+
+			return new SummaryVM(balance, credits, charges);
+		}
+
+		public async Task<SummaryVM> GetYearlySummaryVMAsync(string month)
+		{
+			string year = month.Substring(3);
+
+			int charges = (await ongoingExpenseRepository.GetAllAsync())
+				.Where(x => x.Date.ToString("yyyy") == year)
+				.Sum(x => x.Value);
+
+			charges += (await otherExpenseRepository.GetAllAsync())
+				.Where(x => x.Date.ToString("yyyy") == year)
+				.Sum(x => x.Value);
+
+			int credits = (await salaryRepository.GetAllAsync())
+				.Where(x => x.Date.ToString("yyyy") == year)
+				.Sum(x => x.Value);
+
+			int balance = credits - charges;
+
+			return new SummaryVM(balance, credits, charges);
 		}
 	}
 }

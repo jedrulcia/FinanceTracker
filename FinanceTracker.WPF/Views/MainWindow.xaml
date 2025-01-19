@@ -57,23 +57,39 @@
 
         <!-- MONTHLY SUMMARY -->
         <Grid Grid.Row="1" Grid.Column="0">
+            <Border Background="{StaticResource BrushSecondaryBackground}">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Monthly Summary" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Foreground="White"/>
 
+                    <TextBlock Text="{Binding MonthlySummaryVM.Balance, StringFormat='Balance: {0:C}'}" FontSize="14" Foreground="White" FontWeight="Bold" />
+                    <TextBlock Text="{Binding MonthlySummaryVM.Credits, StringFormat='Credits: {0:C}'}" FontSize="14" Foreground="White" FontWeight="Bold" />
+                    <TextBlock Text="{Binding MonthlySummaryVM.Charges, StringFormat='Charges: {0:C}'}" FontSize="14" Foreground="White" FontWeight="Bold" />
+                </StackPanel>
+            </Border>
         </Grid>
 
         <!-- YEARLY SUMMARY -->
         <Grid Grid.Row="2" Grid.Column="0">
+            <Border Background="{StaticResource BrushSecondaryBackground}">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Yearly Summary" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Foreground="White" />
 
+                    <TextBlock Text="{Binding YearlySummaryVM.Balance, StringFormat='Balance: {0:C}'}" FontSize="14" Foreground="White" FontWeight="Bold" />
+                    <TextBlock Text="{Binding YearlySummaryVM.Credits, StringFormat='Credits: {0:C}'}" FontSize="14" Foreground="White" FontWeight="Bold"/>
+                    <TextBlock Text="{Binding YearlySummaryVM.Charges, StringFormat='Charges: {0:C}'}" FontSize="14" Foreground="White" FontWeight="Bold" />
+                </StackPanel>
+            </Border>
         </Grid>
 
         <!-- SALARY -->
         <Grid Grid.Row="0" Grid.Column="1">
             <Border Background="{StaticResource BrushSecondaryBackground}">
-                <ListBox ItemsSource="{Binding SalaryVMs}">
+                <ListBox ItemsSource="{Binding SalaryVMs}" Background="{StaticResource BrushSecondaryBackground}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <TextBlock Text="{Binding Name}"/>
-                                <TextBlock Text="{Binding Value}"/>
+                                <TextBlock Text="{Binding Name}" Foreground="White" FontWeight="Bold" />
+                                <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold"/>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
@@ -94,12 +110,12 @@
         <!-- ONGOING EXPENSES -->
         <Grid Grid.Row="0" Grid.Column="2" Grid.RowSpan="2">
             <Border Background="{StaticResource BrushSecondaryBackground}">
-                <ListBox ItemsSource="{Binding OngoingExpenseVMs}">
+                <ListBox ItemsSource="{Binding OngoingExpenseVMs}" Background="{StaticResource BrushSecondaryBackground}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <TextBlock Text="{Binding Name}"/>
-                                <TextBlock Text="{Binding Value}"/>
+                                <TextBlock Text="{Binding Name}" Foreground="White" FontWeight="Bold"/>
+                                <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold"/>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
@@ -110,12 +126,12 @@
         <!-- OTHER EXPENSES -->
         <Grid Grid.Row="0" Grid.Column="4">
             <Border Background="{StaticResource BrushSecondaryBackground}">
-                <ListBox ItemsSource="{Binding OtherExpenseVMs}">
+                <ListBox ItemsSource="{Binding OtherExpenseVMs}" Background="{StaticResource BrushSecondaryBackground}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <TextBlock Text="{Binding Name}"/>
-                                <TextBlock Text="{Binding Value}"/>
+                                <TextBlock Text="{Binding Name}" Foreground="White" FontWeight="Bold"/>
+                                <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold"/>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
@@ -126,12 +142,12 @@
         <!-- OVERDUE PAYMENTS -->
         <Grid Grid.Row="1" Grid.Column="4">
             <Border Background="{StaticResource BrushSecondaryBackground}">
-                <ListBox ItemsSource="{Binding OverduePaymentVMs}">
+                <ListBox ItemsSource="{Binding OverduePaymentVMs}" Background="{StaticResource BrushSecondaryBackground}">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
-                                <TextBlock Text="{Binding Name}"/>
-                                <TextBlock Text="{Binding Value}"/>
+                                <TextBlock Text="{Binding Name}" Foreground="White" FontWeight="Bold"/>
+                                <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold"/>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
