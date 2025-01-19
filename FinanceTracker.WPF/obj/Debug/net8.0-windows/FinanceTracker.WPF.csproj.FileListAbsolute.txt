@@ -86,3 +86,4 @@ C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTr
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\FinanceTracker.WPF.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\bin\Debug\net8.0-windows\LiveCharts.dll
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\bin\Debug\net8.0-windows\LiveCharts.Wpf.dll
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs

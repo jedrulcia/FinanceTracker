@@ -63,14 +63,14 @@ namespace FinanceTracker.WPF.Repositories
 			foreach (var item in ongoingList)
 			{
 				var type = await expenseTypeRepository.GetAsync(item.ExpenseTypeId);
-				listVM.Add(new OverduePaymentVM(item.Id, item.Name, item.Value, item.Date, type));
+				listVM.Add(new OverduePaymentVM(item.Id, item.Name, item.Value, item.Date, type, true));
 			}
 
 			List<OtherExpense> list = (await otherExpenseRepository.GetAllAsync()).Where(x => x.Date < targetDate && x.Paid == false).ToList();
 			foreach (var item in list)
 			{
 				var type = await expenseTypeRepository.GetAsync(item.ExpenseTypeId);
-				listVM.Add(new OverduePaymentVM(item.Id, item.Name, item.Value, item.Date, type));
+				listVM.Add(new OverduePaymentVM(item.Id, item.Name, item.Value, item.Date, type, false));
 			}
 
 			return listVM;
@@ -147,29 +147,8 @@ namespace FinanceTracker.WPF.Repositories
 			return (credits, charges);
 		}
 
-		private List<string> GetPieChartTitles()
-		{
-			return new List<string> { "Jedzenie", "Paliwo", "Mieszkanie", "Rachunki", "Raty", "Inne" };
-		}
-
-		private Brush[] GetPieChartColors()
-		{
-			Brush[] pieChartColors = new Brush[]
-			{
-				new SolidColorBrush((Color)ColorConverter.ConvertFromString("#9966FF")),
-				new SolidColorBrush((Color)ColorConverter.ConvertFromString("#4BC0C0")),
-				new SolidColorBrush((Color)ColorConverter.ConvertFromString("#36A2EB")),
-				new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF6384")),
-				new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9F40")),
-				new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFDD33"))
-			};
-			return pieChartColors;
-		}
-
 		public async Task<PieChartVM> GetPieChartVMAsync(string month)
 		{
-			List<string> titles = GetPieChartTitles();
-			Brush[] colors = GetPieChartColors();
 			List<int> values = new List<int>([0, 0, 0, 0, 0, 0]);
 
 			var ongoing = await ongoingExpenseRepository.GetOngoingExpenseVMsAsync(month);

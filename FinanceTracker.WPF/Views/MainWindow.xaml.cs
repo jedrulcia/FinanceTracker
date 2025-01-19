@@ -21,5 +21,5 @@ namespace FinanceTracker.WPF
 			await MainWindowVM.InitializeAsync();
 			DataContext = MainWindowVM;
 		}
-	}
+    }
 }

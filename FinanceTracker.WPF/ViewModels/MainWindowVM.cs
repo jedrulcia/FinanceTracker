@@ -156,14 +156,14 @@ public class MainWindowVM : ObservableObject
 
 		try
 		{
+			PieChartVM = await utilityRepository.GetPieChartVMAsync(SelectedMonth).ConfigureAwait(false);
+			(ColumnChartCredits, ColumnChartCharges) = await utilityRepository.GetColumnChartVMsAsync(SelectedMonth).ConfigureAwait(false);
 			OtherExpenseVMs = await otherExpensesRepository.GetOtherExpenseVMsAsync(SelectedMonth).ConfigureAwait(false);
 			OngoingExpenseVMs = await ongoingExpensesRepository.GetOngoingExpenseVMsAsync(SelectedMonth).ConfigureAwait(false);
 			OverduePaymentVMs = await utilityRepository.GetOverduePaymentVMsAsync(SelectedMonth).ConfigureAwait(false);
 			SalaryVMs = await salaryRepository.GetSalaryVMsAsync(SelectedMonth).ConfigureAwait(false);
 			MonthlySummaryVM = await utilityRepository.GetMonthlySummaryVMAsync(SelectedMonth).ConfigureAwait(false);
 			YearlySummaryVM = await utilityRepository.GetYearlySummaryVMAsync(SelectedMonth).ConfigureAwait(false);
-			(ColumnChartCredits, ColumnChartCharges) = await utilityRepository.GetColumnChartVMsAsync(SelectedMonth).ConfigureAwait(false);
-			PieChartVM = await utilityRepository.GetPieChartVMAsync(SelectedMonth).ConfigureAwait(false);
 		}
 		catch { }
 		finally { isBusy = false; }
