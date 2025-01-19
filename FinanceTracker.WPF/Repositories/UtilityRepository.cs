@@ -3,6 +3,8 @@ using FinanceTracker.EntityFramework.Data;
 using FinanceTracker.WPF.Contracts;
 using FinanceTracker.WPF.ViewModels;
 using LiveCharts;
+using LiveCharts.Defaults;
+using LiveCharts.Wpf;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -12,6 +14,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Documents;
+using System.Windows.Media;
 
 namespace FinanceTracker.WPF.Repositories
 {
@@ -144,5 +147,54 @@ namespace FinanceTracker.WPF.Repositories
 			return (credits, charges);
 		}
 
+		private List<string> GetPieChartTitles()
+		{
+			return new List<string> { "Jedzenie", "Paliwo", "Mieszkanie", "Rachunki", "Raty", "Inne" };
+		}
+
+		private Brush[] GetPieChartColors()
+		{
+			Brush[] pieChartColors = new Brush[]
+			{
+				new SolidColorBrush((Color)ColorConverter.ConvertFromString("#9966FF")),
+				new SolidColorBrush((Color)ColorConverter.ConvertFromString("#4BC0C0")),
+				new SolidColorBrush((Color)ColorConverter.ConvertFromString("#36A2EB")),
+				new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF6384")),
+				new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF9F40")),
+				new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFDD33"))
+			};
+			return pieChartColors;
+		}
+
+		public async Task<PieChartVM> GetPieChartVMAsync(string month)
+		{
+			List<string> titles = GetPieChartTitles();
+			Brush[] colors = GetPieChartColors();
+			List<int> values = new List<int>([0, 0, 0, 0, 0, 0]);
+
+			var ongoing = await ongoingExpenseRepository.GetOngoingExpenseVMsAsync(month);
+			var other = await otherExpenseRepository.GetOtherExpenseVMsAsync(month);
+
+			foreach (var item in ongoing)
+			{
+				values[item.Type.Id - 1] += item.Value;
+			}
+
+			foreach (var item in other)
+			{
+				values[item.Type.Id - 1] += item.Value;
+			}
+
+			List<ChartValues<ObservableValue>> result = new List<ChartValues<ObservableValue>>();
+
+			foreach (var item in values)
+			{
+				var newObject = new ChartValues<ObservableValue> { new ObservableValue(item) };
+				result.Add(newObject);
+			}
+
+
+			return new PieChartVM(result);
+		}
 	}
 }

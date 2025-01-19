@@ -1,10 +1,13 @@
-﻿using FinanceTracker.WPF.Contracts;
+﻿using FinanceTracker.WPF.Base;
+using FinanceTracker.WPF.Contracts;
 using FinanceTracker.WPF.ViewModels;
 using LiveCharts;
+using LiveCharts.Wpf;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Media;
 
 public class MainWindowVM : ObservableObject
 {
@@ -125,6 +128,16 @@ public class MainWindowVM : ObservableObject
 		}
 	}
 
+	private PieChartVM pieChartVM;
+	public PieChartVM PieChartVM
+	{
+		get => pieChartVM;
+		set
+		{
+			pieChartVM = value;
+			OnPropertyChanged();
+		}
+	}
 
 	// Initialize method
 	public async Task InitializeAsync()
@@ -150,6 +163,7 @@ public class MainWindowVM : ObservableObject
 			MonthlySummaryVM = await utilityRepository.GetMonthlySummaryVMAsync(SelectedMonth).ConfigureAwait(false);
 			YearlySummaryVM = await utilityRepository.GetYearlySummaryVMAsync(SelectedMonth).ConfigureAwait(false);
 			(ColumnChartCredits, ColumnChartCharges) = await utilityRepository.GetColumnChartVMsAsync(SelectedMonth).ConfigureAwait(false);
+			PieChartVM = await utilityRepository.GetPieChartVMAsync(SelectedMonth).ConfigureAwait(false);
 		}
 		catch { }
 		finally { isBusy = false; }

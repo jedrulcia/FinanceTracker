@@ -100,6 +100,18 @@
 
         <!-- PIE CHART -->
         <Grid Grid.Row="1" Grid.Column="1">
+            <Border Background="{StaticResource BrushSecondaryBackground}">
+                <lvc:PieChart>
+                    <lvc:PieChart.Series>
+                        <lvc:PieSeries Title="Jedzenie" Values="{Binding PieChartVM.Food}" Fill="#9966FF"/>
+                        <lvc:PieSeries Title="Paliwo" Values="{Binding PieChartVM.Fuel}" Fill="#FFDD33"/>
+                        <lvc:PieSeries Title="Mieszkanie" Values="{Binding PieChartVM.Flat}" Fill="#4BC0C0"/>
+                        <lvc:PieSeries Title="Rachunki" Values="{Binding PieChartVM.Bills}" Fill="#FF9F40"/>
+                        <lvc:PieSeries Title="Raty" Values="{Binding PieChartVM.Rates}" Fill="#36A2EB"/>
+                        <lvc:PieSeries Title="Inne" Values="{Binding PieChartVM.Other}" Fill="#FF6384 "/>
+                    </lvc:PieChart.Series>
+                </lvc:PieChart>
+            </Border>
         </Grid>
 
         <!-- COLUMN CHART -->

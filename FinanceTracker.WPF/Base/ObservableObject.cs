@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinanceTracker.WPF.ViewModels
+namespace FinanceTracker.WPF.Base
 {
 	public abstract class ObservableObject : INotifyPropertyChanged
 	{
