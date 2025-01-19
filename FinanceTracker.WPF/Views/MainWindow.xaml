@@ -44,7 +44,7 @@
 
                     <!-- SALARY CREATE BUTTON -->
                     <Grid Grid.Row="1">
-                        <Button Content="NOWA WYPŁATA" Height="40" Width="280" Background="{StaticResource BrushPositive}" Margin="10,8,10,0" VerticalAlignment="Top" Click="Button_Click"></Button>
+                        <Button Content="NOWA WYPŁATA" Height="40" Width="280" Background="{StaticResource BrushPositive}" Margin="10,8,10,0" VerticalAlignment="Top"></Button>
                     </Grid>
 
                     <!-- ONGOING EXPENSE CREATE BUTTON -->
