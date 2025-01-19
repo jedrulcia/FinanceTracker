@@ -47,7 +47,6 @@ C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTr
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\FinanceTracker.WPF_MarkupCompile.cache
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\FinanceTracker.WPF_MarkupCompile.lref
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\FinanceTracker.WPF.g.resources
-C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\FinanceTracker.WPF.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\FinanceTracker.WPF.AssemblyInfoInputs.cache
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\FinanceTracker.WPF.AssemblyInfo.cs
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\FinanceTracker.WPF.csproj.CoreCompileInputs.cache
@@ -84,3 +83,6 @@ C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTr
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\bin\Debug\net8.0-windows\System.Diagnostics.EventLog.dll
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\bin\Debug\net8.0-windows\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\obj\Debug\net8.0-windows\FinanceTracker.WPF.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\bin\Debug\net8.0-windows\LiveCharts.dll
+C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\bin\Debug\net8.0-windows\LiveCharts.Wpf.dll

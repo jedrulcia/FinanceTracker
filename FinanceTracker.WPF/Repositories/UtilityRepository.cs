@@ -2,6 +2,7 @@
 using FinanceTracker.EntityFramework.Data;
 using FinanceTracker.WPF.Contracts;
 using FinanceTracker.WPF.ViewModels;
+using LiveCharts;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -111,5 +112,37 @@ namespace FinanceTracker.WPF.Repositories
 
 			return new SummaryVM(balance, credits, charges);
 		}
+
+		public async Task<(ChartValues<int> charges, ChartValues<int> credits)> GetColumnChartVMsAsync(string month)
+		{
+			string year = month.Substring(3);
+
+			ChartValues<int> charges = new ChartValues<int>();
+			ChartValues<int> credits = new ChartValues<int>();
+
+
+			for (int i = 1; i <= 12; i++)
+			{
+				string currentMonth = $"{i:D2}-{year}";
+
+				int credit = (await salaryRepository.GetAllAsync())
+					.Where(x => x.Date.ToString("MM-yyyy") == currentMonth)
+					.Sum(x => x.Value);
+
+				int charge = (await ongoingExpenseRepository.GetAllAsync())
+					.Where(x => x.Date.ToString("MM-yyyy") == currentMonth)
+					.Sum(x => x.Value);
+
+				charge += (await otherExpenseRepository.GetAllAsync())
+					.Where(x => x.Date.ToString("MM-yyyy") == currentMonth)
+					.Sum(x => x.Value);
+
+				credits.Add(credit);
+				charges.Add(charge);
+			}
+
+			return (credits, charges);
+		}
+
 	}
 }

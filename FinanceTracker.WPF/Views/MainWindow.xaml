@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
         xmlns:local="clr-namespace:FinanceTracker.WPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="680" Width="1200">
@@ -62,8 +63,8 @@
                     <TextBlock Text="Monthly Summary" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Foreground="White"/>
 
                     <TextBlock Text="{Binding MonthlySummaryVM.Balance, StringFormat='Balance: {0:C}'}" FontSize="14" Foreground="White" FontWeight="Bold" />
-                    <TextBlock Text="{Binding MonthlySummaryVM.Credits, StringFormat='Credits: {0:C}'}" FontSize="14" Foreground="White" FontWeight="Bold" />
-                    <TextBlock Text="{Binding MonthlySummaryVM.Charges, StringFormat='Charges: {0:C}'}" FontSize="14" Foreground="White" FontWeight="Bold" />
+                    <TextBlock Text="{Binding MonthlySummaryVM.Credits, StringFormat='Credits: {0:C}'}" FontSize="14" Foreground="{StaticResource BrushPositive}" FontWeight="Bold" />
+                    <TextBlock Text="{Binding MonthlySummaryVM.Charges, StringFormat='Charges: {0:C}'}" FontSize="14" Foreground="{StaticResource BrushNegative}" FontWeight="Bold" />
                 </StackPanel>
             </Border>
         </Grid>
@@ -71,12 +72,12 @@
         <!-- YEARLY SUMMARY -->
         <Grid Grid.Row="2" Grid.Column="0">
             <Border Background="{StaticResource BrushSecondaryBackground}">
-            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBlock Text="Yearly Summary" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Foreground="White" />
 
                     <TextBlock Text="{Binding YearlySummaryVM.Balance, StringFormat='Balance: {0:C}'}" FontSize="14" Foreground="White" FontWeight="Bold" />
-                    <TextBlock Text="{Binding YearlySummaryVM.Credits, StringFormat='Credits: {0:C}'}" FontSize="14" Foreground="White" FontWeight="Bold"/>
-                    <TextBlock Text="{Binding YearlySummaryVM.Charges, StringFormat='Charges: {0:C}'}" FontSize="14" Foreground="White" FontWeight="Bold" />
+                    <TextBlock Text="{Binding YearlySummaryVM.Credits, StringFormat='Credits: {0:C}'}" FontSize="14" Foreground="{StaticResource BrushPositive}" FontWeight="Bold"/>
+                    <TextBlock Text="{Binding YearlySummaryVM.Charges, StringFormat='Charges: {0:C}'}" FontSize="14" Foreground="{StaticResource BrushNegative}" FontWeight="Bold" />
                 </StackPanel>
             </Border>
         </Grid>
@@ -99,12 +100,24 @@
 
         <!-- PIE CHART -->
         <Grid Grid.Row="1" Grid.Column="1">
-
         </Grid>
 
-        <!-- BAR CHART -->
+        <!-- COLUMN CHART -->
         <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
-
+            <Border Background="{StaticResource BrushSecondaryBackground}">
+                <lvc:CartesianChart>
+                    <lvc:CartesianChart.Series>
+                        <lvc:ColumnSeries Fill="{StaticResource BrushPositive}" 
+                                          Title="Uznania"
+                                          MaxColumnWidth="25"
+                                          Values="{Binding ColumnChartCredits}"/>
+                        <lvc:ColumnSeries Fill="{StaticResource BrushNegative}" 
+                                          Title="Wydatki"
+                                          MaxColumnWidth="25" 
+                                          Values="{Binding ColumnChartCharges}"/>
+                    </lvc:CartesianChart.Series>
+                </lvc:CartesianChart>
+            </Border>
         </Grid>
 
         <!-- ONGOING EXPENSES -->

@@ -1,4 +1,5 @@
 ﻿using FinanceTracker.WPF.ViewModels;
+using LiveCharts;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,5 +15,6 @@ namespace FinanceTracker.WPF.Contracts
 		Task<ObservableCollection<OverduePaymentVM>> GetOverduePaymentVMsAsync(string month);
 		Task<SummaryVM> GetMonthlySummaryVMAsync(string month);
 		Task<SummaryVM> GetYearlySummaryVMAsync(string month);
+		Task<(ChartValues<int> charges, ChartValues<int> credits)> GetColumnChartVMsAsync(string month);
 	}
 }

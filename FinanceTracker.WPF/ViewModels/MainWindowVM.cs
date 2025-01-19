@@ -1,5 +1,6 @@
 ﻿using FinanceTracker.WPF.Contracts;
 using FinanceTracker.WPF.ViewModels;
+using LiveCharts;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -102,6 +103,29 @@ public class MainWindowVM : ObservableObject
 		}
 	}
 
+	private ChartValues<int> columnChartCredits;
+	public ChartValues<int> ColumnChartCredits
+	{
+		get => columnChartCredits;
+		set
+		{
+			columnChartCredits = value;
+			OnPropertyChanged();
+		}
+	}
+
+	private ChartValues<int> columnChartCharges;
+	public ChartValues<int> ColumnChartCharges
+	{
+		get => columnChartCharges;
+		set
+		{
+			columnChartCharges = value;
+			OnPropertyChanged();
+		}
+	}
+
+
 	// Initialize method
 	public async Task InitializeAsync()
 	{
@@ -125,6 +149,7 @@ public class MainWindowVM : ObservableObject
 			SalaryVMs = await salaryRepository.GetSalaryVMsAsync(SelectedMonth).ConfigureAwait(false);
 			MonthlySummaryVM = await utilityRepository.GetMonthlySummaryVMAsync(SelectedMonth).ConfigureAwait(false);
 			YearlySummaryVM = await utilityRepository.GetYearlySummaryVMAsync(SelectedMonth).ConfigureAwait(false);
+			(ColumnChartCredits, ColumnChartCharges) = await utilityRepository.GetColumnChartVMsAsync(SelectedMonth).ConfigureAwait(false);
 		}
 		catch { }
 		finally { isBusy = false; }
