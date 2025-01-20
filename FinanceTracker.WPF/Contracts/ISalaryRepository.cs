@@ -7,5 +7,6 @@ namespace FinanceTracker.WPF.Contracts
     public interface ISalaryRepository : IGenericRepository<Salary>
     {
         Task<ObservableCollection<SalaryVM>> GetSalaryVMsAsync(string month);
+        Task CreateSalaryAsync(CreateVM createVM);
     }
 }

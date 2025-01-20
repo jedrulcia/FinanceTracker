@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\App.xaml
-2-453605790
+3-1923056109
 
-28235904889
+341354825035
 250-1223046534
-Styles\Common.xaml;Views\MainWindow.xaml;
+Styles\Common.xaml;Views\CreateWindow.xaml;Views\MainWindow.xaml;
 
 False
 

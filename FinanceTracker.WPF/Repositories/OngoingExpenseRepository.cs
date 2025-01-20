@@ -32,5 +32,18 @@ namespace FinanceTracker.WPF.Repositories
 			
 			return listVM;
 		}
+
+		public async Task CreateOngoingExpenseAsync(CreateVM createVM)
+		{
+			OngoingExpense ongoingExpense = new OngoingExpense
+			{
+				Name = createVM.Name,
+				Value = createVM.Value,
+				Date = createVM.Date,
+				Paid = false,
+				ExpenseTypeId = createVM.ExpenseTypeId,
+			};
+			await AddAsync(ongoingExpense);
+		}
 	}
 }

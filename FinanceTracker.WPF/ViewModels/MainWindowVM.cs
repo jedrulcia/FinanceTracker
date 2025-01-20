@@ -149,7 +149,7 @@ public class MainWindowVM : ObservableObject
 
 	// Refresh method
 	private bool isBusy = false;
-	private async Task RefreshMainViewAsync()
+	public async Task RefreshMainViewAsync()
 	{
 		if (isBusy) return;
 		isBusy = true;

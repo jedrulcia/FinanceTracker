@@ -1,7 +1,9 @@
 ﻿using FinanceTracker.EntityFramework;
+using FinanceTracker.WPF.Base.WindowFactory;
 using FinanceTracker.WPF.Contracts;
 using FinanceTracker.WPF.Repositories;
 using FinanceTracker.WPF.ViewModels;
+using FinanceTracker.WPF.Views;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -32,6 +34,8 @@ namespace FinanceTracker.WPF
 			services.AddDbContext<AppDbContext>(options =>
 			options.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=FinanceTracker;Trusted_Connection=True;MultipleActiveResultSets=true;Encrypt=False"));
 
+			services.AddScoped<IWindowFactory, WindowFactory>();
+
 			services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 			services.AddScoped<IOngoingExpenseRepository, OngoingExpenseRepository>();
 			services.AddScoped<IExpenseTypeRepository, ExpenseTypeRepository>();
@@ -40,8 +44,10 @@ namespace FinanceTracker.WPF
 			services.AddScoped<IUtilityRepository, UtilityRepository>();
 
 			services.AddScoped<MainWindowVM>();
+			services.AddScoped<MainWindow>(s => new MainWindow(s.GetRequiredService<MainWindowVM>(), s.GetRequiredService<IWindowFactory>()));
 
-			services.AddScoped<MainWindow>(s => new MainWindow(s.GetRequiredService<MainWindowVM>()));
+			services.AddTransient<CreateWindow>();
+			services.AddScoped<CreateWindowVM>();
 
 			return services.BuildServiceProvider();
 		}

@@ -28,5 +28,17 @@ namespace FinanceTracker.WPF.Repositories
 
 			return listVM;
 		}
+
+		public async Task CreateSalaryAsync(CreateVM createVM)
+		{
+			Salary salary = new Salary
+			{
+				Name = createVM.Name,
+				Value = createVM.Value,
+				Date = createVM.Date,
+				Paid = false
+			};
+			await AddAsync(salary);
+		}
 	}
 }
