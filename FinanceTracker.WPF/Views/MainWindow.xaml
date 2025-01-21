@@ -92,7 +92,7 @@
         <!-- PIE CHART -->
         <Grid Grid.Row="1" Grid.Column="1">
             <Border Background="{StaticResource BrushSecondaryBackground}">
-                <lvc:PieChart>
+                <lvc:PieChart LegendLocation="Right">
                     <lvc:PieChart.Series >
                         <lvc:PieSeries Title="Jedzenie" Values="{Binding PieChartVM.Food}" Fill="#9966FF"/>
                         <lvc:PieSeries Title="Paliwo" Values="{Binding PieChartVM.Fuel}" Fill="#FFDD33"/>
@@ -164,8 +164,46 @@
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <StackPanel>
+                                <!-- Wspólne pola tekstowe -->
                                 <TextBlock Text="{Binding Name}" Foreground="White" FontWeight="Bold"/>
                                 <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold"/>
+
+                                <!-- Kontener dla przycisków -->
+                                <StackPanel>
+                                    <StackPanel.Style>
+                                        <Style TargetType="StackPanel">
+                                            <Style.Triggers>
+                                                <!-- Gdy Module == OngoingExpense -->
+                                                <DataTrigger Binding="{Binding Module}" Value="OngoingExpense">
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </DataTrigger>
+                                                <!-- Gdy Module == OtherExpense -->
+                                                <DataTrigger Binding="{Binding Module}" Value="OtherExpense">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </StackPanel.Style>
+                                    <Button Content="Edit" Background="{StaticResource BrushNeutral}" Width="50" Tag="{Binding Id}" Click="OpenEditOngoingExpenseModal_Click"/>
+                                </StackPanel>
+
+                                <StackPanel>
+                                    <StackPanel.Style>
+                                        <Style TargetType="StackPanel">
+                                            <Style.Triggers>
+                                                <!-- Gdy Module == OtherExpense -->
+                                                <DataTrigger Binding="{Binding Module}" Value="OtherExpense">
+                                                    <Setter Property="Visibility" Value="Visible" />
+                                                </DataTrigger>
+                                                <!-- Gdy Module == OngoingExpense -->
+                                                <DataTrigger Binding="{Binding Module}" Value="OngoingExpense">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </StackPanel.Style>
+                                    <Button Content="Edit" Background="{StaticResource BrushNeutral}" Width="50" Tag="{Binding Id}" Click="OpenEditOtherExpenseModal_Click"/>
+                                </StackPanel>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>

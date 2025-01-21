@@ -10,5 +10,7 @@ namespace FinanceTracker.WPF.Contracts
 		Task CreateOtherExpenseAsync(CreateVM createVM);
 		Task<EditVM> GetOtherExpenseEditVMAsync(int id);
 		Task EditOtherExpenseAsync(EditVM editVM);
+		Task ChangeOtherExpenseStatusAsync(int id);
+		Task DeleteOtherExpenseAsync(int id);
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using FinanceTracker.WPF.Base;
 using FinanceTracker.WPF.Contracts;
+using FinanceTracker.WPF.Repositories;
 using FinanceTracker.WPF.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -65,6 +66,38 @@ namespace FinanceTracker.WPF.WindowViewModels
 					break;
 				case Module.OtherExpense:
 					await otherExpenseRepository.EditOtherExpenseAsync(EditVM);
+					break;
+			}
+		}
+
+		public async Task ChangeStatus()
+		{
+			switch (Module)
+			{
+				case Module.Salary:
+					await salaryRepository.ChangeSalaryStatusAsync(EditVM.Id);
+					break;
+				case Module.OngoingExpense:
+					await ongoingExpenseRepository.ChangeOngoingExpenseStatusAsync(EditVM.Id);
+					break;
+				case Module.OtherExpense:
+					await otherExpenseRepository.ChangeOtherExpenseStatusAsync(EditVM.Id);
+					break;
+			}
+		}
+
+		public async Task DeleteEntityAsync()
+		{
+			switch (this.Module)
+			{
+				case Module.Salary:
+					await salaryRepository.DeleteSalaryAsync(EditVM.Id);
+					break;
+				case Module.OngoingExpense:
+					await ongoingExpenseRepository.DeleteOngoingExpenseAsync(EditVM.Id);
+					break;
+				case Module.OtherExpense:
+					await otherExpenseRepository.DeleteOtherExpenseAsync(EditVM.Id);
 					break;
 			}
 		}

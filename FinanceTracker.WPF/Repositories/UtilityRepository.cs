@@ -1,5 +1,6 @@
 ﻿using FinanceTracker.EntityFramework;
 using FinanceTracker.EntityFramework.Data;
+using FinanceTracker.WPF.Base;
 using FinanceTracker.WPF.Contracts;
 using FinanceTracker.WPF.ViewModels;
 using LiveCharts;
@@ -63,14 +64,14 @@ namespace FinanceTracker.WPF.Repositories
 			foreach (var item in ongoingList)
 			{
 				var type = await expenseTypeRepository.GetAsync(item.ExpenseTypeId);
-				listVM.Add(new OverduePaymentVM(item.Id, item.Name, item.Value, item.Date, type, true));
+				listVM.Add(new OverduePaymentVM(item.Id, item.Name, item.Value, item.Date, type, true, Module.OngoingExpense));
 			}
 
-			List<OtherExpense> list = (await otherExpenseRepository.GetAllAsync()).Where(x => x.Date < targetDate && x.Paid == false).ToList();
-			foreach (var item in list)
+			List<OtherExpense> otherList = (await otherExpenseRepository.GetAllAsync()).Where(x => x.Date < targetDate && x.Paid == false).ToList();
+			foreach (var item in otherList)
 			{
 				var type = await expenseTypeRepository.GetAsync(item.ExpenseTypeId);
-				listVM.Add(new OverduePaymentVM(item.Id, item.Name, item.Value, item.Date, type, false));
+				listVM.Add(new OverduePaymentVM(item.Id, item.Name, item.Value, item.Date, type, false, Module.OtherExpense));
 			}
 
 			return listVM;
@@ -171,7 +172,6 @@ namespace FinanceTracker.WPF.Repositories
 				var newObject = new ChartValues<ObservableValue> { new ObservableValue(item) };
 				result.Add(newObject);
 			}
-
 
 			return new PieChartVM(result);
 		}

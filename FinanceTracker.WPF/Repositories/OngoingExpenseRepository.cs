@@ -74,5 +74,17 @@ namespace FinanceTracker.WPF.Repositories
 
 			await UpdateAsync(expense);
 		}
+
+		public async Task ChangeOngoingExpenseStatusAsync(int id)
+		{
+			var expense = await GetAsync(id);
+			expense.Paid = !expense.Paid;
+			await UpdateAsync(expense);
+		}
+
+		public async Task DeleteOngoingExpenseAsync(int id)
+		{
+			await DeleteAsync(id);
+		}
 	}
 }

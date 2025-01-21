@@ -41,5 +41,17 @@ namespace FinanceTracker.WPF.Views
 			await EditWindowVM.EditEntityAsync();
 			this.Close();
 		}
+
+		private async void DeleteEntity_Click(object sender, RoutedEventArgs e)
+		{
+			await EditWindowVM.DeleteEntityAsync();
+			this.Close();
+		}
+
+		private async void ChangeStatus_Click(object sender, RoutedEventArgs e)
+		{
+			await EditWindowVM.ChangeStatus();
+			this.Close();
+		}
 	}
 }

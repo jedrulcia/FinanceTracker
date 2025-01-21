@@ -10,5 +10,7 @@ namespace FinanceTracker.WPF.Contracts
         Task CreateSalaryAsync(CreateVM createVM);
         Task<EditVM> GetSalaryEditVMAsync(int id);
         Task EditSalaryAsync(EditVM editVM);
-    }
+        Task ChangeSalaryStatusAsync(int id);
+		Task DeleteSalaryAsync(int id);
+	}
 }

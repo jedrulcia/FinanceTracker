@@ -67,5 +67,17 @@ namespace FinanceTracker.WPF.Repositories
 
 			await UpdateAsync(salary);
 		}
+
+		public async Task ChangeSalaryStatusAsync(int id)
+		{
+			var salary = await GetAsync(id);
+			salary.Paid = !salary.Paid;
+			await UpdateAsync(salary);
+		}
+
+		public async Task DeleteSalaryAsync(int id)
+		{
+			await DeleteAsync(id);
+		}
 	}
 }
