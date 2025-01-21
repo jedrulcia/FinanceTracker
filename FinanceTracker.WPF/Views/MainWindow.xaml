@@ -10,9 +10,10 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="33*"/>
+            <RowDefinition Height="33*"/>
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
@@ -24,30 +25,55 @@
 
         <Grid Grid.Row="0" Grid.Column="0">
             <Border Background="{StaticResource BrushSecondaryBackground}">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="25*"/>
-                        <RowDefinition Height="25*"/>
-                        <RowDefinition Height="25*"/>
-                        <RowDefinition Height="25*"/>
-                    </Grid.RowDefinitions>
-
-                    <!-- SELECT LIST MONTH -->
-                    <Grid Grid.Row="0">
-                        <ComboBox Height="40" Width="280" Background="{StaticResource BrushNeutral}" HorizontalAlignment="Center" VerticalAlignment="Center"
-                                ItemsSource="{Binding Months}" SelectedItem="{Binding SelectedMonth}"/>
-                    </Grid>
-
-                    <!-- SALARY CREATE BUTTON -->
-                    <Grid Grid.Row="1">
-                        <Button Content="NOWY ELEMENT" Height="40" Width="280" Background="{StaticResource BrushPositive}" Margin="10,8,10,0" VerticalAlignment="Top" Click="OpenCreateModal_Click"></Button>
-                    </Grid>
-                </Grid>
+                <!-- SELECT LIST MONTH -->
+                <ComboBox Height="40" Width="280" Background="{StaticResource BrushNeutral}" HorizontalAlignment="Center" VerticalAlignment="Center" ItemsSource="{Binding Months}" SelectedItem="{Binding SelectedMonth}"/>
             </Border>
         </Grid>
 
-        <!-- MONTHLY SUMMARY -->
+        <!-- SALARY CREATE BUTTON -->
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Border Background="{StaticResource BrushSecondaryBackground}">
+                <Button Content="NOWY ELEMENT" Height="40" Width="280" Background="{StaticResource BrushPositive}" Margin="10,8,10,0" VerticalAlignment="Top" Click="OpenCreateModal_Click"></Button>
+            </Border>
+        </Grid>
+
+        <!-- PIE CHART -->
+        <Grid Grid.Row="0" Grid.Column="2" Grid.RowSpan="2">
+            <Border Background="{StaticResource BrushSecondaryBackground}">
+                <lvc:PieChart LegendLocation="Right">
+                    <lvc:PieChart.Series >
+                        <lvc:PieSeries Title="Jedzenie" Values="{Binding PieChartVM.Food}" Fill="#9966FF"/>
+                        <lvc:PieSeries Title="Paliwo" Values="{Binding PieChartVM.Fuel}" Fill="#FFDD33"/>
+                        <lvc:PieSeries Title="Mieszkanie" Values="{Binding PieChartVM.Flat}" Fill="#4BC0C0"/>
+                        <lvc:PieSeries Title="Rachunki" Values="{Binding PieChartVM.Bills}" Fill="#FF9F40"/>
+                        <lvc:PieSeries Title="Raty" Values="{Binding PieChartVM.Rates}" Fill="#36A2EB"/>
+                        <lvc:PieSeries Title="Inne" Values="{Binding PieChartVM.Other}" Fill="#FF6384 "/>
+                    </lvc:PieChart.Series>
+                </lvc:PieChart>
+            </Border>
+        </Grid>
+
+        <!-- PIE CHART -->
+        <Grid Grid.Row="0" Grid.Column="3" Grid.RowSpan="2">
+            <Border Background="{StaticResource BrushSecondaryBackground}">
+            </Border>
+        </Grid>
+
+        <!-- YEARLY SUMMARY -->
         <Grid Grid.Row="1" Grid.Column="0">
+            <Border Background="{StaticResource BrushSecondaryBackground}">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Yearly Summary" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Foreground="White" />
+
+                    <TextBlock Text="{Binding YearlySummaryVM.Balance, StringFormat='Balance: {0:C}'}" FontSize="14" Foreground="White" FontWeight="Bold" />
+                    <TextBlock Text="{Binding YearlySummaryVM.Credits, StringFormat='Credits: {0:C}'}" FontSize="14" Foreground="{StaticResource BrushPositive}" FontWeight="Bold"/>
+                    <TextBlock Text="{Binding YearlySummaryVM.Charges, StringFormat='Charges: {0:C}'}" FontSize="14" Foreground="{StaticResource BrushNegative}" FontWeight="Bold" />
+                </StackPanel>
+            </Border>
+        </Grid>
+        
+        <!-- MONTHLY SUMMARY -->
+        <Grid Grid.Row="1" Grid.Column="1">
             <Border Background="{StaticResource BrushSecondaryBackground}">
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBlock Text="Monthly Summary" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Foreground="White"/>
@@ -59,21 +85,8 @@
             </Border>
         </Grid>
 
-        <!-- YEARLY SUMMARY -->
-        <Grid Grid.Row="2" Grid.Column="0">
-            <Border Background="{StaticResource BrushSecondaryBackground}">
-                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBlock Text="Yearly Summary" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Foreground="White" />
-
-                    <TextBlock Text="{Binding YearlySummaryVM.Balance, StringFormat='Balance: {0:C}'}" FontSize="14" Foreground="White" FontWeight="Bold" />
-                    <TextBlock Text="{Binding YearlySummaryVM.Credits, StringFormat='Credits: {0:C}'}" FontSize="14" Foreground="{StaticResource BrushPositive}" FontWeight="Bold"/>
-                    <TextBlock Text="{Binding YearlySummaryVM.Charges, StringFormat='Charges: {0:C}'}" FontSize="14" Foreground="{StaticResource BrushNegative}" FontWeight="Bold" />
-                </StackPanel>
-            </Border>
-        </Grid>
-
         <!-- SALARY -->
-        <Grid Grid.Row="0" Grid.Column="1">
+        <Grid Grid.Row="2" Grid.Column="0">
             <Border Background="{StaticResource BrushSecondaryBackground}">
                 <ListBox ItemsSource="{Binding SalaryVMs}" Background="{StaticResource BrushSecondaryBackground}">
                     <ListBox.ItemTemplate>
@@ -89,42 +102,8 @@
             </Border>
         </Grid>
 
-        <!-- PIE CHART -->
-        <Grid Grid.Row="1" Grid.Column="1">
-            <Border Background="{StaticResource BrushSecondaryBackground}">
-                <lvc:PieChart LegendLocation="Right">
-                    <lvc:PieChart.Series >
-                        <lvc:PieSeries Title="Jedzenie" Values="{Binding PieChartVM.Food}" Fill="#9966FF"/>
-                        <lvc:PieSeries Title="Paliwo" Values="{Binding PieChartVM.Fuel}" Fill="#FFDD33"/>
-                        <lvc:PieSeries Title="Mieszkanie" Values="{Binding PieChartVM.Flat}" Fill="#4BC0C0"/>
-                        <lvc:PieSeries Title="Rachunki" Values="{Binding PieChartVM.Bills}" Fill="#FF9F40"/>
-                        <lvc:PieSeries Title="Raty" Values="{Binding PieChartVM.Rates}" Fill="#36A2EB"/>
-                        <lvc:PieSeries Title="Inne" Values="{Binding PieChartVM.Other}" Fill="#FF6384 "/>
-                    </lvc:PieChart.Series>
-                </lvc:PieChart>
-            </Border>
-        </Grid>
-
-        <!-- COLUMN CHART -->
-        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3">
-            <Border Background="{StaticResource BrushSecondaryBackground}">
-                <lvc:CartesianChart>
-                    <lvc:CartesianChart.Series>
-                        <lvc:ColumnSeries Fill="{StaticResource BrushPositive}" 
-                                          Title="Uznania"
-                                          MaxColumnWidth="25"
-                                          Values="{Binding ColumnChartCredits}"/>
-                        <lvc:ColumnSeries Fill="{StaticResource BrushNegative}" 
-                                          Title="Wydatki"
-                                          MaxColumnWidth="25" 
-                                          Values="{Binding ColumnChartCharges}"/>
-                    </lvc:CartesianChart.Series>
-                </lvc:CartesianChart>
-            </Border>
-        </Grid>
-
         <!-- ONGOING EXPENSES -->
-        <Grid Grid.Row="0" Grid.Column="2" Grid.RowSpan="2">
+        <Grid Grid.Row="2" Grid.Column="1">
             <Border Background="{StaticResource BrushSecondaryBackground}">
                 <ListBox ItemsSource="{Binding OngoingExpenseVMs}" Background="{StaticResource BrushSecondaryBackground}">
                     <ListBox.ItemTemplate>
@@ -141,7 +120,7 @@
         </Grid>
 
         <!-- OTHER EXPENSES -->
-        <Grid Grid.Row="0" Grid.Column="4">
+        <Grid Grid.Row="2" Grid.Column="2">
             <Border Background="{StaticResource BrushSecondaryBackground}">
                 <ListBox ItemsSource="{Binding OtherExpenseVMs}" Background="{StaticResource BrushSecondaryBackground}">
                     <ListBox.ItemTemplate>
@@ -158,7 +137,7 @@
         </Grid>
 
         <!-- OVERDUE PAYMENTS -->
-        <Grid Grid.Row="1" Grid.Column="4">
+        <Grid Grid.Row="2" Grid.Column="3">
             <Border Background="{StaticResource BrushSecondaryBackground}">
                 <ListBox ItemsSource="{Binding OverduePaymentVMs}" Background="{StaticResource BrushSecondaryBackground}">
                     <ListBox.ItemTemplate>
@@ -208,6 +187,24 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
+            </Border>
+        </Grid>
+
+        <!-- COLUMN CHART -->
+        <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">
+            <Border Background="{StaticResource BrushSecondaryBackground}">
+                <lvc:CartesianChart>
+                    <lvc:CartesianChart.Series>
+                        <lvc:ColumnSeries Fill="{StaticResource BrushPositive}" 
+                                          Title="Uznania"
+                                          MaxColumnWidth="25"
+                                          Values="{Binding ColumnChartCredits}"/>
+                        <lvc:ColumnSeries Fill="{StaticResource BrushNegative}" 
+                                          Title="Wydatki"
+                                          MaxColumnWidth="25" 
+                                          Values="{Binding ColumnChartCharges}"/>
+                    </lvc:CartesianChart.Series>
+                </lvc:CartesianChart>
             </Border>
         </Grid>
     </Grid>
