@@ -1,4 +1,5 @@
-﻿using FinanceTracker.WPF.ViewModels;
+﻿using FinanceTracker.WPF.Base;
+using FinanceTracker.WPF.WindowViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +16,7 @@ using System.Windows.Shapes;
 
 namespace FinanceTracker.WPF.Views
 {
-    public partial class CreateWindow : Window
+	public partial class CreateWindow : Window
     {
         private readonly CreateWindowVM CreateWindowVM;
         public CreateWindow(CreateWindowVM createWindowVM)
@@ -27,19 +28,19 @@ namespace FinanceTracker.WPF.Views
 
         private async void CreateSalary_Click(object sender, RoutedEventArgs e)
 		{
-			await CreateWindowVM.CreateSalary();
+			await CreateWindowVM.CreateEntity(Module.Salary);
 			this.Close();
 		}
 
 		private async void CreateOngoingExpense_Click(object sender, RoutedEventArgs e)
 		{
-			await CreateWindowVM.CreateOngoingExpense();
+			await CreateWindowVM.CreateEntity(Module.OngoingExpense);
 			this.Close();
 		}
 
 		private async void CreateOtherExpense_Click(object sender, RoutedEventArgs e)
 		{
-			await CreateWindowVM.CreateOtherExpense();
+			await CreateWindowVM.CreateEntity(Module.OtherExpense);
 			this.Close();
 		}
 	}

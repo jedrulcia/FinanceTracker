@@ -1,9 +1,9 @@
 ﻿using FinanceTracker.EntityFramework;
-using FinanceTracker.WPF.Base.WindowFactory;
+using FinanceTracker.WPF.AppWindowFactory;
 using FinanceTracker.WPF.Contracts;
 using FinanceTracker.WPF.Repositories;
-using FinanceTracker.WPF.ViewModels;
 using FinanceTracker.WPF.Views;
+using FinanceTracker.WPF.WindowViewModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -48,6 +48,9 @@ namespace FinanceTracker.WPF
 
 			services.AddTransient<CreateWindow>();
 			services.AddScoped<CreateWindowVM>();
+
+			services.AddTransient<EditWindow>();
+			services.AddScoped<EditWindowVM>();
 
 			return services.BuildServiceProvider();
 		}

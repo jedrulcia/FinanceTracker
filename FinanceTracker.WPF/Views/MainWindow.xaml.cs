@@ -1,9 +1,11 @@
-﻿using FinanceTracker.WPF.Base.WindowFactory;
+﻿using FinanceTracker.WPF.AppWindowFactory;
+using FinanceTracker.WPF.Base;
 using FinanceTracker.WPF.Contracts;
 using FinanceTracker.WPF.ViewModels;
 using FinanceTracker.WPF.Views;
 using System.Diagnostics;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace FinanceTracker.WPF
 {
@@ -14,7 +16,6 @@ namespace FinanceTracker.WPF
 
 		public MainWindow(MainWindowVM mainVM, IWindowFactory windowFactory)
 		{
-			InitializeComponent();
 			MainWindowVM = mainVM;
 			DataContext = MainWindowVM;
 			WindowFactory = windowFactory;
@@ -23,14 +24,27 @@ namespace FinanceTracker.WPF
 		public async Task InitializeAsync()
 		{
 			await MainWindowVM.InitializeAsync();
-			DataContext = MainWindowVM;
+			InitializeComponent();
 		}
 
 		private async void OpenCreateModal_Click(object sender, RoutedEventArgs e)
 		{
-			CreateWindow createWindow = WindowFactory.CreateWindow<CreateWindow>();
+			CreateWindow createWindow = WindowFactory.CreateWindow<CreateWindow>(Module.None, 0);
 			createWindow.ShowDialog();
 			await MainWindowVM.RefreshMainViewAsync();
         }
-    }
+
+		private async void OpenEditSalaryModal_Click(object sender, RoutedEventArgs e)
+		{
+			var button = sender as Button;
+			if (button?.Tag is int id)
+			{
+				EditWindow editWindow = WindowFactory.CreateWindow<EditWindow>(Module.Salary, id);
+				await editWindow.InitializeAsync();
+				editWindow.ShowDialog();
+				await MainWindowVM.RefreshMainViewAsync();
+			}
+		}
+
+	}
 }

@@ -8,10 +8,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="680" Width="1200">
 
-    <Window.Resources>
-        <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter" />
-    </Window.Resources>
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -85,6 +81,7 @@
                             <StackPanel>
                                 <TextBlock Text="{Binding Name}" Foreground="White" FontWeight="Bold" />
                                 <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold"/>
+                                <Button Content="Edit" Background="{StaticResource BrushNeutral}" Width="50" Tag="{Binding Id}" Click="OpenEditSalaryModal_Click"></Button>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
@@ -95,7 +92,7 @@
         <!-- PIE CHART -->
         <Grid Grid.Row="1" Grid.Column="1">
             <Border Background="{StaticResource BrushSecondaryBackground}">
-                <lvc:PieChart Visibility="{Binding PieChartVM.IsDataLoaded, Converter={StaticResource BoolToVisibilityConverter}}">
+                <lvc:PieChart>
                     <lvc:PieChart.Series >
                         <lvc:PieSeries Title="Jedzenie" Values="{Binding PieChartVM.Food}" Fill="#9966FF"/>
                         <lvc:PieSeries Title="Paliwo" Values="{Binding PieChartVM.Fuel}" Fill="#FFDD33"/>

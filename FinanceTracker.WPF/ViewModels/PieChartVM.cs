@@ -10,13 +10,12 @@ namespace FinanceTracker.WPF.ViewModels
 {
 	public class PieChartVM
 	{
-		public ChartValues<ObservableValue> Food { get; set; } = new ChartValues<ObservableValue> { new ObservableValue(1) };
-		public ChartValues<ObservableValue> Fuel { get; set; } = new ChartValues<ObservableValue> { new ObservableValue(1) };
-		public ChartValues<ObservableValue> Flat { get; set; } = new ChartValues<ObservableValue> { new ObservableValue(1) };
-		public ChartValues<ObservableValue> Bills { get; set; } = new ChartValues<ObservableValue> { new ObservableValue(1) };
-		public ChartValues<ObservableValue> Rates { get; set; } = new ChartValues<ObservableValue> { new ObservableValue(1) };
-		public ChartValues<ObservableValue> Other { get; set; } = new ChartValues<ObservableValue> { new ObservableValue(1) };
-		public bool IsDataLoaded { get; set; } = false;
+		public ChartValues<ObservableValue> Food { get; set; }
+		public ChartValues<ObservableValue> Fuel { get; set; }
+		public ChartValues<ObservableValue> Flat { get; set; }
+		public ChartValues<ObservableValue> Bills { get; set; }
+		public ChartValues<ObservableValue> Rates { get; set; }
+		public ChartValues<ObservableValue> Other { get; set; }
 		public PieChartVM(List<ChartValues<ObservableValue>> result)
 		{
 			this.Food = result[0];
@@ -25,7 +24,6 @@ namespace FinanceTracker.WPF.ViewModels
 			this.Bills = result[3];
 			this.Rates = result[4];
 			this.Other = result[5];
-			this.IsDataLoaded = true;
 		}
 	}
 }
