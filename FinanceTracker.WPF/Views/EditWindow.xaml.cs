@@ -28,14 +28,18 @@ namespace FinanceTracker.WPF.Views
 		{
 			InitializeComponent();
 			EditWindowVM = editWindowVM;
-			EditWindowVM.Id = Id;
-			EditWindowVM.Module = Module;
 			DataContext = EditWindowVM;
 		}
 
 		public async Task InitializeAsync()
 		{
-			await EditWindowVM.InitializeAsync();
+			await EditWindowVM.InitializeAsync(Id, Module);
+		}
+
+		private async void EditEntity_Click(object sender, RoutedEventArgs e)
+		{
+			await EditWindowVM.EditEntityAsync();
+			this.Close();
 		}
 	}
 }

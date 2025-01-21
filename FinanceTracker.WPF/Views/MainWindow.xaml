@@ -132,6 +132,7 @@
                             <StackPanel>
                                 <TextBlock Text="{Binding Name}" Foreground="White" FontWeight="Bold"/>
                                 <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold"/>
+                                <Button Content="Edit" Background="{StaticResource BrushNeutral}" Width="50" Tag="{Binding Id}" Click="OpenEditOngoingExpenseModal_Click"></Button>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
@@ -148,6 +149,7 @@
                             <StackPanel>
                                 <TextBlock Text="{Binding Name}" Foreground="White" FontWeight="Bold"/>
                                 <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold"/>
+                                <Button Content="Edit" Background="{StaticResource BrushNeutral}" Width="50" Tag="{Binding Id}" Click="OpenEditOtherExpenseModal_Click"></Button>
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>

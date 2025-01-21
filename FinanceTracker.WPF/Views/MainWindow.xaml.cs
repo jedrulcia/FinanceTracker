@@ -46,5 +46,29 @@ namespace FinanceTracker.WPF
 			}
 		}
 
+		private async void OpenEditOngoingExpenseModal_Click(object sender, RoutedEventArgs e)
+		{
+			var button = sender as Button;
+			if (button?.Tag is int id)
+			{
+				EditWindow editWindow = WindowFactory.CreateWindow<EditWindow>(Module.OngoingExpense, id);
+				await editWindow.InitializeAsync();
+				editWindow.ShowDialog();
+				await MainWindowVM.RefreshMainViewAsync();
+			}
+		}
+
+		private async void OpenEditOtherExpenseModal_Click(object sender, RoutedEventArgs e)
+		{
+			var button = sender as Button;
+			if (button?.Tag is int id)
+			{
+				EditWindow editWindow = WindowFactory.CreateWindow<EditWindow>(Module.OtherExpense, id);
+				await editWindow.InitializeAsync();
+				editWindow.ShowDialog();
+				await MainWindowVM.RefreshMainViewAsync();
+			}
+		}
+
 	}
 }

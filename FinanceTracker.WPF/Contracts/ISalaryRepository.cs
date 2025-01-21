@@ -8,5 +8,7 @@ namespace FinanceTracker.WPF.Contracts
     {
         Task<ObservableCollection<SalaryVM>> GetSalaryVMsAsync(string month);
         Task CreateSalaryAsync(CreateVM createVM);
+        Task<EditVM> GetSalaryEditVMAsync(int id);
+        Task EditSalaryAsync(EditVM editVM);
     }
 }

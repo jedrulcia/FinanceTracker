@@ -8,5 +8,7 @@ namespace FinanceTracker.WPF.Contracts
 	{
 		Task<ObservableCollection<OngoingExpenseVM>> GetOngoingExpenseVMsAsync(string month);
 		Task CreateOngoingExpenseAsync(CreateVM createVM);
+		Task<EditVM> GetOngoingExpenseEditVMAsync(int id);
+		Task EditOngoingExpenseAsync(EditVM editVM);
 	}
 }

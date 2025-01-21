@@ -45,5 +45,34 @@ namespace FinanceTracker.WPF.Repositories
 			};
 			await AddAsync(ongoingExpense);
 		}
+
+		public async Task<EditVM> GetOngoingExpenseEditVMAsync(int id)
+		{
+			var expense = await GetAsync(id);
+
+			EditVM editVM = new EditVM
+			{
+				Id = id,
+				Name = expense.Name,
+				Value = expense.Value,
+				Date = expense.Date,
+				ExpenseTypeId = expense.ExpenseTypeId,
+				ExpenseTypeVisible = true
+			};
+
+			return editVM;
+		}
+
+		public async Task EditOngoingExpenseAsync(EditVM editVM)
+		{
+			var expense = await GetAsync(editVM.Id);
+
+			expense.Name = editVM.Name;
+			expense.Value = editVM.Value;
+			expense.Date = editVM.Date;
+			expense.ExpenseTypeId = editVM.ExpenseTypeId;
+
+			await UpdateAsync(expense);
+		}
 	}
 }

@@ -40,5 +40,32 @@ namespace FinanceTracker.WPF.Repositories
 			};
 			await AddAsync(salary);
 		}
+
+		public async Task<EditVM> GetSalaryEditVMAsync(int id)
+		{
+			var salary = await GetAsync(id);
+
+			EditVM editVM = new EditVM
+			{
+				Id = id,
+				Name = salary.Name,
+				Value = salary.Value,
+				Date = salary.Date,
+				ExpenseTypeVisible = false
+			};
+
+			return editVM;
+		}
+
+		public async Task EditSalaryAsync(EditVM editVM)
+		{
+			var salary = await GetAsync(editVM.Id);
+
+			salary.Name = editVM.Name;
+			salary.Value = editVM.Value;
+			salary.Date = editVM.Date;
+
+			await UpdateAsync(salary);
+		}
 	}
 }
