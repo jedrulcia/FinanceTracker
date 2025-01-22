@@ -6,6 +6,7 @@ using FinanceTracker.WPF.Views;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace FinanceTracker.WPF
 {
@@ -36,7 +37,7 @@ namespace FinanceTracker.WPF
 
 		private async void OpenEditSalaryModal_Click(object sender, RoutedEventArgs e)
 		{
-			var button = sender as Button;
+			var button = sender as Grid;
 			if (button?.Tag is int id)
 			{
 				EditWindow editWindow = WindowFactory.CreateWindow<EditWindow>(Module.Salary, id);
@@ -48,7 +49,7 @@ namespace FinanceTracker.WPF
 
 		private async void OpenEditOngoingExpenseModal_Click(object sender, RoutedEventArgs e)
 		{
-			var button = sender as Button;
+			var button = sender as Grid;
 			if (button?.Tag is int id)
 			{
 				EditWindow editWindow = WindowFactory.CreateWindow<EditWindow>(Module.OngoingExpense, id);
@@ -60,7 +61,7 @@ namespace FinanceTracker.WPF
 
 		private async void OpenEditOtherExpenseModal_Click(object sender, RoutedEventArgs e)
 		{
-			var button = sender as Button;
+			var button = sender as Grid;
 			if (button?.Tag is int id)
 			{
 				EditWindow editWindow = WindowFactory.CreateWindow<EditWindow>(Module.OtherExpense, id);
@@ -69,7 +70,30 @@ namespace FinanceTracker.WPF
 				await MainWindowVM.RefreshMainViewAsync();
 			}
 		}
+		private void OnGridMouseDown(object sender, MouseButtonEventArgs e)
+		{
+			var grid = sender as Grid;
+			if (grid == null) return;
 
+			// Pobierz wartość 'Module' z Tag przypisanego do Grid
+			var module = grid.Tag as string;
 
+			// Sprawdź, który moduł jest przypisany
+			if (module == "OngoingExpense")
+			{
+				// Wywołaj odpowiednią metodę dla OngoingExpense
+				OpenEditOngoingExpenseModal_Click(sender, e);
+			}
+			else if (module == "OtherExpense")
+			{
+				// Wywołaj odpowiednią metodę dla OtherExpense
+				OpenEditOtherExpenseModal_Click(sender, e);
+			}
+		}
+
+		private void CartesianChart_Loaded(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }

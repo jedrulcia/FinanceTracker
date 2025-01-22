@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="680" Width="1200">
 
-    <Grid>
+    <Grid Background="{StaticResource BrushPrimaryBackground}">
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
             <RowDefinition Height="25*"/>
@@ -23,23 +23,47 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
+        <!-- MONTHS COMBOBOX -->
         <Grid Grid.Row="0" Grid.Column="0">
-            <Border Background="{StaticResource BrushSecondaryBackground}">
-                <!-- SELECT LIST MONTH -->
-                <ComboBox Height="40" Width="280" Background="{StaticResource BrushNeutral}" HorizontalAlignment="Center" VerticalAlignment="Center" ItemsSource="{Binding Months}" SelectedItem="{Binding SelectedMonth}"/>
+            <Border 
+                Background="{StaticResource BrushSecondaryBackground}" 
+                CornerRadius="10" 
+                Margin="10"
+                Padding="10"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch">
+                <ComboBox 
+                    Background="{StaticResource BrushNeutral}" 
+                    HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch" 
+                    ItemsSource="{Binding Months}" 
+                    SelectedItem="{Binding SelectedMonth}" />
             </Border>
         </Grid>
 
-        <!-- SALARY CREATE BUTTON -->
+        <!-- CREATE BUTTON -->
         <Grid Grid.Row="0" Grid.Column="1">
-            <Border Background="{StaticResource BrushSecondaryBackground}">
-                <Button Content="NOWY ELEMENT" Height="40" Width="280" Background="{StaticResource BrushPositive}" Margin="10,8,10,0" VerticalAlignment="Top" Click="OpenCreateModal_Click"></Button>
+            <Border 
+                Background="{StaticResource BrushSecondaryBackground}" 
+                CornerRadius="10" 
+                Margin="10"
+                Padding="10"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch">
+                <Button Content="NOWY ELEMENT" Background="{StaticResource BrushPositive}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="OpenCreateModal_Click"></Button>
             </Border>
         </Grid>
 
-        <!-- PIE CHART -->
+
+            <!-- PIE CHART -->
         <Grid Grid.Row="0" Grid.Column="2" Grid.RowSpan="2">
-            <Border Background="{StaticResource BrushSecondaryBackground}">
+            <Border 
+                Background="{StaticResource BrushSecondaryBackground}" 
+                CornerRadius="10" 
+                Margin="10"
+                Padding="10"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch">
                 <lvc:PieChart LegendLocation="Right">
                     <lvc:PieChart.Series >
                         <lvc:PieSeries Title="Jedzenie" Values="{Binding PieChartVM.Food}" Fill="#9966FF"/>
@@ -53,28 +77,33 @@
             </Border>
         </Grid>
 
-        <!-- PIE CHART -->
-        <Grid Grid.Row="0" Grid.Column="3" Grid.RowSpan="2">
-            <Border Background="{StaticResource BrushSecondaryBackground}">
-            </Border>
-        </Grid>
-
         <!-- YEARLY SUMMARY -->
         <Grid Grid.Row="1" Grid.Column="0">
-            <Border Background="{StaticResource BrushSecondaryBackground}">
+            <Border 
+                Background="{StaticResource BrushSecondaryBackground}" 
+                CornerRadius="10" 
+                Margin="10"
+                Padding="10"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch">
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBlock Text="Yearly Summary" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Foreground="White" />
-
                     <TextBlock Text="{Binding YearlySummaryVM.Balance, StringFormat='Balance: {0:C}'}" FontSize="14" Foreground="White" FontWeight="Bold" />
                     <TextBlock Text="{Binding YearlySummaryVM.Credits, StringFormat='Credits: {0:C}'}" FontSize="14" Foreground="{StaticResource BrushPositive}" FontWeight="Bold"/>
                     <TextBlock Text="{Binding YearlySummaryVM.Charges, StringFormat='Charges: {0:C}'}" FontSize="14" Foreground="{StaticResource BrushNegative}" FontWeight="Bold" />
                 </StackPanel>
             </Border>
         </Grid>
-        
+
         <!-- MONTHLY SUMMARY -->
         <Grid Grid.Row="1" Grid.Column="1">
-            <Border Background="{StaticResource BrushSecondaryBackground}">
+            <Border 
+                Background="{StaticResource BrushSecondaryBackground}" 
+                CornerRadius="10" 
+                Margin="10"
+                Padding="10"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch">
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                     <TextBlock Text="Monthly Summary" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Foreground="White"/>
 
@@ -87,32 +116,71 @@
 
         <!-- SALARY -->
         <Grid Grid.Row="2" Grid.Column="0">
-            <Border Background="{StaticResource BrushSecondaryBackground}">
-                <ListBox ItemsSource="{Binding SalaryVMs}" Background="{StaticResource BrushSecondaryBackground}">
+            <Border 
+             Background="{StaticResource BrushSecondaryBackground}" 
+            CornerRadius="10" 
+            Margin="10"
+            Padding="10"
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch">
+                <ListBox 
+                ItemsSource="{Binding SalaryVMs}" 
+                Background="Transparent" 
+                BorderThickness="0"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel>
-                                <TextBlock Text="{Binding Name}" Foreground="White" FontWeight="Bold" />
-                                <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold"/>
-                                <Button Content="Edit" Background="{StaticResource BrushNeutral}" Width="50" Tag="{Binding Id}" Click="OpenEditSalaryModal_Click"></Button>
-                            </StackPanel>
+                            <Border>
+                                <Grid MouseDown="OpenEditSalaryModal_Click">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.Tag>
+                                        <Binding Path="Id" />
+                                    </Grid.Tag>
+                                    <TextBlock Text="{Binding Name}" Foreground="White" FontWeight="Bold" Margin="0,0,10,0" Grid.Column="0" />
+                                    <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold" Margin="0,0,10,0" Grid.Column="1" />
+                                </Grid>
+                            </Border>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
             </Border>
         </Grid>
 
+
         <!-- ONGOING EXPENSES -->
         <Grid Grid.Row="2" Grid.Column="1">
-            <Border Background="{StaticResource BrushSecondaryBackground}">
-                <ListBox ItemsSource="{Binding OngoingExpenseVMs}" Background="{StaticResource BrushSecondaryBackground}">
+            <Border 
+             Background="{StaticResource BrushSecondaryBackground}" 
+            CornerRadius="10" 
+            Margin="10"
+            Padding="10"
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch">
+                <ListBox 
+                ItemsSource="{Binding OngoingExpenseVMs}" 
+                Background="Transparent" 
+                BorderThickness="0"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel>
-                                <TextBlock Text="{Binding Name}" Foreground="White" FontWeight="Bold"/>
-                                <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold"/>
-                                <Button Content="Edit" Background="{StaticResource BrushNeutral}" Width="50" Tag="{Binding Id}" Click="OpenEditOngoingExpenseModal_Click"></Button>
-                            </StackPanel>
+                            <Border>
+                                <Grid MouseDown="OpenEditOngoingExpenseModal_Click">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.Tag>
+                                        <Binding Path="Id" />
+                                    </Grid.Tag>
+                                    <TextBlock Text="{Binding Name}" Foreground="White" FontWeight="Bold" Margin="0,0,10,0" Grid.Column="0" />
+                                    <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold" Margin="0,0,10,0" Grid.Column="1" />
+                                </Grid>
+                            </Border>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
@@ -121,15 +189,34 @@
 
         <!-- OTHER EXPENSES -->
         <Grid Grid.Row="2" Grid.Column="2">
-            <Border Background="{StaticResource BrushSecondaryBackground}">
-                <ListBox ItemsSource="{Binding OtherExpenseVMs}" Background="{StaticResource BrushSecondaryBackground}">
+            <Border 
+             Background="{StaticResource BrushSecondaryBackground}" 
+            CornerRadius="10" 
+            Margin="10"
+            Padding="10"
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch">
+                <ListBox 
+                ItemsSource="{Binding OtherExpenseVMs}" 
+                Background="Transparent" 
+                BorderThickness="0"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel>
-                                <TextBlock Text="{Binding Name}" Foreground="White" FontWeight="Bold"/>
-                                <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold"/>
-                                <Button Content="Edit" Background="{StaticResource BrushNeutral}" Width="50" Tag="{Binding Id}" Click="OpenEditOtherExpenseModal_Click"></Button>
-                            </StackPanel>
+                            <Border>
+                                <Grid MouseDown="OpenEditOtherExpenseModal_Click">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.Tag>
+                                        <Binding Path="Id" />
+                                    </Grid.Tag>
+                                    <TextBlock Text="{Binding Name}" Foreground="White" FontWeight="Bold" Margin="0,0,10,0" Grid.Column="0" />
+                                    <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold" Margin="0,0,10,0" Grid.Column="1" />
+                                </Grid>
+                            </Border>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
@@ -192,8 +279,14 @@
 
         <!-- COLUMN CHART -->
         <Grid Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="4">
-            <Border Background="{StaticResource BrushSecondaryBackground}">
-                <lvc:CartesianChart>
+            <Border 
+                Background="{StaticResource BrushSecondaryBackground}" 
+                CornerRadius="10" 
+                Margin="10"
+                Padding="10"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch">
+                <lvc:CartesianChart Loaded="CartesianChart_Loaded">
                     <lvc:CartesianChart.Series>
                         <lvc:ColumnSeries Fill="{StaticResource BrushPositive}" 
                                           Title="Uznania"
