@@ -14,7 +14,6 @@ namespace FinanceTracker.WPF.Contracts
 	public interface IUtilityRepository
 	{
 		public (ObservableCollection<string> months, string selectedMonth) GenerateMonthList();
-		Task<ObservableCollection<OverduePaymentVM>> GetOverduePaymentVMsAsync(string month);
 		Task<SummaryVM> GetMonthlySummaryVMAsync(string month);
 		Task<SummaryVM> GetYearlySummaryVMAsync(string month);
 		Task<(ChartValues<int> charges, ChartValues<int> credits)> GetColumnChartVMsAsync(string month);

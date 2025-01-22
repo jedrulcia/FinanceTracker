@@ -55,28 +55,6 @@ namespace FinanceTracker.WPF.Repositories
 			return (months, selectedMonth);
 		}
 
-		public async Task<ObservableCollection<OverduePaymentVM>> GetOverduePaymentVMsAsync(string month)
-		{
-			var targetDate = DateTime.ParseExact(month, "MM-yyyy", null);
-			ObservableCollection<OverduePaymentVM> listVM = new ObservableCollection<OverduePaymentVM>();
-
-			List<OngoingExpense> ongoingList = (await ongoingExpenseRepository.GetAllAsync()).Where(x => x.Date < targetDate).ToList();
-			foreach (var item in ongoingList)
-			{
-				var type = await expenseTypeRepository.GetAsync(item.ExpenseTypeId);
-				listVM.Add(new OverduePaymentVM(item.Id, item.Name, item.Value, item.Date, type, true, Module.OngoingExpense));
-			}
-
-			List<OtherExpense> otherList = (await otherExpenseRepository.GetAllAsync()).Where(x => x.Date < targetDate && x.Paid == false).ToList();
-			foreach (var item in otherList)
-			{
-				var type = await expenseTypeRepository.GetAsync(item.ExpenseTypeId);
-				listVM.Add(new OverduePaymentVM(item.Id, item.Name, item.Value, item.Date, type, false, Module.OtherExpense));
-			}
-
-			return listVM;
-		}
-
 		public async Task<SummaryVM> GetMonthlySummaryVMAsync(string month)
 		{
 			int charges = (await ongoingExpenseRepository.GetAllAsync())

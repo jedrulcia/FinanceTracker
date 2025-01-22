@@ -87,10 +87,10 @@
                 HorizontalAlignment="Stretch" 
                 VerticalAlignment="Stretch">
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBlock Text="Yearly Summary" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Foreground="White" />
-                    <TextBlock Text="{Binding YearlySummaryVM.Balance, StringFormat='Balance: {0:C}'}" FontSize="14" Foreground="White" FontWeight="Bold" />
-                    <TextBlock Text="{Binding YearlySummaryVM.Credits, StringFormat='Credits: {0:C}'}" FontSize="14" Foreground="{StaticResource BrushPositive}" FontWeight="Bold"/>
-                    <TextBlock Text="{Binding YearlySummaryVM.Charges, StringFormat='Charges: {0:C}'}" FontSize="14" Foreground="{StaticResource BrushNegative}" FontWeight="Bold" />
+                    <TextBlock Text="Podsumowanie roczne" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Foreground="White" />
+                    <TextBlock Text="{Binding YearlySummaryVM.Balance, StringFormat='Bilans: {0:N2}'}" FontSize="14" Foreground="White" FontWeight="Bold" />
+                    <TextBlock Text="{Binding YearlySummaryVM.Credits, StringFormat='Uznania: {0:N2}'}" FontSize="14" Foreground="{StaticResource BrushPositive}" FontWeight="Bold"/>
+                    <TextBlock Text="{Binding YearlySummaryVM.Charges, StringFormat='Obciążenia: {0:N2}'}" FontSize="14" Foreground="{StaticResource BrushNegative}" FontWeight="Bold" />
                 </StackPanel>
             </Border>
         </Grid>
@@ -105,11 +105,11 @@
                 HorizontalAlignment="Stretch" 
                 VerticalAlignment="Stretch">
                 <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <TextBlock Text="Monthly Summary" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Foreground="White"/>
+                    <TextBlock Text="Podsumowanie miesięczne" FontSize="16" FontWeight="Bold" Margin="0,0,0,10" Foreground="White"/>
 
-                    <TextBlock Text="{Binding MonthlySummaryVM.Balance, StringFormat='Balance: {0:C}'}" FontSize="14" Foreground="White" FontWeight="Bold" />
-                    <TextBlock Text="{Binding MonthlySummaryVM.Credits, StringFormat='Credits: {0:C}'}" FontSize="14" Foreground="{StaticResource BrushPositive}" FontWeight="Bold" />
-                    <TextBlock Text="{Binding MonthlySummaryVM.Charges, StringFormat='Charges: {0:C}'}" FontSize="14" Foreground="{StaticResource BrushNegative}" FontWeight="Bold" />
+                    <TextBlock Text="{Binding MonthlySummaryVM.Balance, StringFormat='Bilans: {0:N2}'}" FontSize="14" Foreground="White" FontWeight="Bold" />
+                    <TextBlock Text="{Binding MonthlySummaryVM.Credits, StringFormat='Uznania: {0:N2}'}" FontSize="14" Foreground="{StaticResource BrushPositive}" FontWeight="Bold" />
+                    <TextBlock Text="{Binding MonthlySummaryVM.Charges, StringFormat='Obciążenia: {0:N2}'}" FontSize="14" Foreground="{StaticResource BrushNegative}" FontWeight="Bold" />
                 </StackPanel>
             </Border>
         </Grid>
@@ -134,14 +134,14 @@
                             <Border>
                                 <Grid MouseDown="OpenEditSalaryModal_Click">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
                                     <Grid.Tag>
                                         <Binding Path="Id" />
                                     </Grid.Tag>
                                     <TextBlock Text="{Binding Name}" Foreground="White" FontWeight="Bold" Margin="0,0,10,0" Grid.Column="0" />
-                                    <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold" Margin="0,0,10,0" Grid.Column="1" />
+                                    <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold" Margin="0,0,10,0" Grid.Column="1"/>
                                 </Grid>
                             </Border>
                         </DataTemplate>
@@ -171,7 +171,7 @@
                             <Border>
                                 <Grid MouseDown="OpenEditOngoingExpenseModal_Click">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
                                     <Grid.Tag>
@@ -207,14 +207,14 @@
                             <Border>
                                 <Grid MouseDown="OpenEditOtherExpenseModal_Click">
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="Auto" />
                                     </Grid.ColumnDefinitions>
                                     <Grid.Tag>
                                         <Binding Path="Id" />
                                     </Grid.Tag>
                                     <TextBlock Text="{Binding Name}" Foreground="White" FontWeight="Bold" Margin="0,0,10,0" Grid.Column="0" />
-                                    <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold" Margin="0,0,10,0" Grid.Column="1" />
+                                    <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold" Margin="0,0,10,0" Grid.Column="1"/>
                                 </Grid>
                             </Border>
                         </DataTemplate>
@@ -225,52 +225,34 @@
 
         <!-- OVERDUE PAYMENTS -->
         <Grid Grid.Row="2" Grid.Column="3">
-            <Border Background="{StaticResource BrushSecondaryBackground}">
-                <ListBox ItemsSource="{Binding OverduePaymentVMs}" Background="{StaticResource BrushSecondaryBackground}">
+            <Border 
+             Background="{StaticResource BrushSecondaryBackground}" 
+            CornerRadius="10" 
+            Margin="10"
+            Padding="10"
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch">
+                <ListBox 
+                ItemsSource="{Binding OverduePaymentVMs}" 
+                Background="Transparent" 
+                BorderThickness="0"
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel>
-                                <!-- Wspólne pola tekstowe -->
-                                <TextBlock Text="{Binding Name}" Foreground="White" FontWeight="Bold"/>
-                                <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold"/>
-
-                                <!-- Kontener dla przycisków -->
-                                <StackPanel>
-                                    <StackPanel.Style>
-                                        <Style TargetType="StackPanel">
-                                            <Style.Triggers>
-                                                <!-- Gdy Module == OngoingExpense -->
-                                                <DataTrigger Binding="{Binding Module}" Value="OngoingExpense">
-                                                    <Setter Property="Visibility" Value="Visible" />
-                                                </DataTrigger>
-                                                <!-- Gdy Module == OtherExpense -->
-                                                <DataTrigger Binding="{Binding Module}" Value="OtherExpense">
-                                                    <Setter Property="Visibility" Value="Collapsed" />
-                                                </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </StackPanel.Style>
-                                    <Button Content="Edit" Background="{StaticResource BrushNeutral}" Width="50" Tag="{Binding Id}" Click="OpenEditOngoingExpenseModal_Click"/>
-                                </StackPanel>
-
-                                <StackPanel>
-                                    <StackPanel.Style>
-                                        <Style TargetType="StackPanel">
-                                            <Style.Triggers>
-                                                <!-- Gdy Module == OtherExpense -->
-                                                <DataTrigger Binding="{Binding Module}" Value="OtherExpense">
-                                                    <Setter Property="Visibility" Value="Visible" />
-                                                </DataTrigger>
-                                                <!-- Gdy Module == OngoingExpense -->
-                                                <DataTrigger Binding="{Binding Module}" Value="OngoingExpense">
-                                                    <Setter Property="Visibility" Value="Collapsed" />
-                                                </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </StackPanel.Style>
-                                    <Button Content="Edit" Background="{StaticResource BrushNeutral}" Width="50" Tag="{Binding Id}" Click="OpenEditOtherExpenseModal_Click"/>
-                                </StackPanel>
-                            </StackPanel>
+                            <Border>
+                                <Grid MouseDown="OpenEditOtherExpenseModal_Click">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.Tag>
+                                        <Binding Path="Id" />
+                                    </Grid.Tag>
+                                    <TextBlock Text="{Binding Name}" Foreground="White" FontWeight="Bold" Margin="0,0,10,0" Grid.Column="0" />
+                                    <TextBlock Text="{Binding Value}" Foreground="White" FontWeight="Bold" Margin="0,0,10,0" Grid.Column="1"/>
+                                </Grid>
+                            </Border>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
@@ -286,7 +268,7 @@
                 Padding="10"
                 HorizontalAlignment="Stretch" 
                 VerticalAlignment="Stretch">
-                <lvc:CartesianChart Loaded="CartesianChart_Loaded">
+                <lvc:CartesianChart>
                     <lvc:CartesianChart.Series>
                         <lvc:ColumnSeries Fill="{StaticResource BrushPositive}" 
                                           Title="Uznania"

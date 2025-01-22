@@ -62,8 +62,8 @@ public class MainWindowVM : ObservableObject
 		}
 	}
 
-	private ObservableCollection<OverduePaymentVM> overduePaymentVMs;
-	public ObservableCollection<OverduePaymentVM> OverduePaymentVMs
+	private ObservableCollection<OtherExpenseVM> overduePaymentVMs;
+	public ObservableCollection<OtherExpenseVM> OverduePaymentVMs
 	{
 		get => overduePaymentVMs;
 		set
@@ -160,7 +160,7 @@ public class MainWindowVM : ObservableObject
 			(ColumnChartCredits, ColumnChartCharges) = await utilityRepository.GetColumnChartVMsAsync(SelectedMonth);
 			OtherExpenseVMs = await otherExpensesRepository.GetOtherExpenseVMsAsync(SelectedMonth);
 			OngoingExpenseVMs = await ongoingExpensesRepository.GetOngoingExpenseVMsAsync(SelectedMonth);
-			OverduePaymentVMs = await utilityRepository.GetOverduePaymentVMsAsync(SelectedMonth);
+			OverduePaymentVMs = await otherExpensesRepository.GetOverduePaymentVMsAsync(SelectedMonth);
 			SalaryVMs = await salaryRepository.GetSalaryVMsAsync(SelectedMonth);
 			MonthlySummaryVM = await utilityRepository.GetMonthlySummaryVMAsync(SelectedMonth);
 			YearlySummaryVM = await utilityRepository.GetYearlySummaryVMAsync(SelectedMonth);

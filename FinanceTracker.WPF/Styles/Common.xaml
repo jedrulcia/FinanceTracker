@@ -2,8 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <!-- Colors -->
-    <Color x:Key="ColorPrimaryBackground">#181736</Color>
-    <Color x:Key="ColorSecondaryBackground">#383560</Color>
+    <Color x:Key="ColorPrimaryBackground">#0B131B</Color>
+    <Color x:Key="ColorSecondaryBackground">#1C2E46</Color>
     <Color x:Key="ColorPositive">#3EDCC3</Color>
     <Color x:Key="ColorNegative">#FF6388</Color>
     <Color x:Key="ColorNeutral">#36A2EB</Color>

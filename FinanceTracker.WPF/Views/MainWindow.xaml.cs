@@ -70,30 +70,5 @@ namespace FinanceTracker.WPF
 				await MainWindowVM.RefreshMainViewAsync();
 			}
 		}
-		private void OnGridMouseDown(object sender, MouseButtonEventArgs e)
-		{
-			var grid = sender as Grid;
-			if (grid == null) return;
-
-			// Pobierz wartość 'Module' z Tag przypisanego do Grid
-			var module = grid.Tag as string;
-
-			// Sprawdź, który moduł jest przypisany
-			if (module == "OngoingExpense")
-			{
-				// Wywołaj odpowiednią metodę dla OngoingExpense
-				OpenEditOngoingExpenseModal_Click(sender, e);
-			}
-			else if (module == "OtherExpense")
-			{
-				// Wywołaj odpowiednią metodę dla OtherExpense
-				OpenEditOtherExpenseModal_Click(sender, e);
-			}
-		}
-
-		private void CartesianChart_Loaded(object sender, RoutedEventArgs e)
-		{
-
-		}
 	}
 }
