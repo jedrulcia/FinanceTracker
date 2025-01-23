@@ -18,6 +18,9 @@
     <Page Update="Styles\Common.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Styles\RoundedButtonStyle.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Styles\ScrollBarStyles.xaml">
       <SubType>Designer</SubType>
     </Page>

@@ -10,16 +10,16 @@
       "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\styles\\scrollbarstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\styles\\scrollbarstyles.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\styles\\common.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\styles\\common.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\styles\\roundedbuttonstyle.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\styles\\roundedbuttonstyle.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\styles\\common.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|solutionrelative:financetracker.wpf\\styles\\common.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AEA83A6C-0018-45CF-97D5-9B2DFA2CFAB0}|FinanceTracker.WPF\\FinanceTracker.WPF.csproj|c:\\users\\jedrulcia\\desktop\\jedrzej\\programowanko\\github\\financetracker\\financetracker.wpf\\windowviewmodels\\mainwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,7 +33,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 215,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -53,39 +53,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Common.xaml",
-              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Styles\\Common.xaml",
-              "RelativeDocumentMoniker": "FinanceTracker.WPF\\Styles\\Common.xaml",
-              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Styles\\Common.xaml",
-              "RelativeToolTip": "FinanceTracker.WPF\\Styles\\Common.xaml",
+              "DocumentIndex": 3,
+              "Title": "RoundedButtonStyle.xaml",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Styles\\RoundedButtonStyle.xaml",
+              "RelativeDocumentMoniker": "FinanceTracker.WPF\\Styles\\RoundedButtonStyle.xaml",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Styles\\RoundedButtonStyle.xaml",
+              "RelativeToolTip": "FinanceTracker.WPF\\Styles\\RoundedButtonStyle.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-23T19:10:41.05Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PieChartCore.cs",
-              "DocumentMoniker": "C:\\Users\\Jedrulcia\\AppData\\Local\\Temp\\.vsdbgsrc\\e5a31cb590da2766a8c52e4e87d26aa412cfcc9bb8e682781c39619df4ab9e72\\PieChartCore.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\e5a31cb590da2766a8c52e4e87d26aa412cfcc9bb8e682781c39619df4ab9e72\\PieChartCore.cs",
-              "ToolTip": "C:\\Users\\Jedrulcia\\AppData\\Local\\Temp\\.vsdbgsrc\\e5a31cb590da2766a8c52e4e87d26aa412cfcc9bb8e682781c39619df4ab9e72\\PieChartCore.cs[Tylko do odczytu]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\e5a31cb590da2766a8c52e4e87d26aa412cfcc9bb8e682781c39619df4ab9e72\\PieChartCore.cs[Tylko do odczytu]",
-              "ViewState": "AgIAAAcAAAAAAAAAAAASwBsAAABEAAAAAQAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T19:00:46.091Z",
-              "EditorCaption": "[Tylko do odczytu]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ScrollBarStyles.xaml",
-              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Styles\\ScrollBarStyles.xaml",
-              "RelativeDocumentMoniker": "FinanceTracker.WPF\\Styles\\ScrollBarStyles.xaml",
-              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Styles\\ScrollBarStyles.xaml",
-              "RelativeToolTip": "FinanceTracker.WPF\\Styles\\ScrollBarStyles.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-23T18:55:15.405Z",
+              "WhenOpened": "2025-01-23T19:58:29.843Z",
               "EditorCaption": ""
             },
             {
@@ -102,7 +77,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "Common.xaml",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Styles\\Common.xaml",
+              "RelativeDocumentMoniker": "FinanceTracker.WPF\\Styles\\Common.xaml",
+              "ToolTip": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Styles\\Common.xaml",
+              "RelativeToolTip": "FinanceTracker.WPF\\Styles\\Common.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-23T19:10:41.05Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PieChartCore.cs",
+              "DocumentMoniker": "C:\\Users\\Jedrulcia\\AppData\\Local\\Temp\\.vsdbgsrc\\e5a31cb590da2766a8c52e4e87d26aa412cfcc9bb8e682781c39619df4ab9e72\\PieChartCore.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\e5a31cb590da2766a8c52e4e87d26aa412cfcc9bb8e682781c39619df4ab9e72\\PieChartCore.cs",
+              "ToolTip": "C:\\Users\\Jedrulcia\\AppData\\Local\\Temp\\.vsdbgsrc\\e5a31cb590da2766a8c52e4e87d26aa412cfcc9bb8e682781c39619df4ab9e72\\PieChartCore.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\AppData\\Local\\Temp\\.vsdbgsrc\\e5a31cb590da2766a8c52e4e87d26aa412cfcc9bb8e682781c39619df4ab9e72\\PieChartCore.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAASwBsAAABEAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T19:00:46.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Jedrulcia\\Desktop\\Jedrzej\\Programowanko\\github\\FinanceTracker\\FinanceTracker.WPF\\Views\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "FinanceTracker.WPF\\Views\\MainWindow.xaml.cs",
@@ -110,8 +110,7 @@
               "RelativeToolTip": "FinanceTracker.WPF\\Views\\MainWindow.xaml.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAiwEcAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T23:30:22.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-22T23:30:22.508Z"
             },
             {
               "$type": "Document",

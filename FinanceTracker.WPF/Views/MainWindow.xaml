@@ -12,6 +12,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="../Styles/ScrollBarStyles.xaml" />
+                <ResourceDictionary Source="../Styles/RoundedButtonStyle.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
@@ -33,7 +34,12 @@
 
         <!-- MONTHS COMBOBOX -->
         <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
             <Border 
+                Grid.Column="0"
                 Background="{StaticResource BrushSecondaryBackground}" 
                 CornerRadius="10" 
                 Margin="10"
@@ -47,24 +53,22 @@
                     ItemsSource="{Binding Months}" 
                     SelectedItem="{Binding SelectedMonth}" />
             </Border>
+            <Button Grid.Column="1"
+                    Style="{DynamicResource RoundedButtonStyle}" Content="NOWY" 
+                    HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch"
+                    Margin="10"
+                    Padding="10"
+                    Background="{StaticResource BrushPositive}"
+                    FontWeight="Bold"
+                    FontSize="16"
+                    
+                    Click="OpenCreateModal_Click"/>
         </Grid>
 
-        <!-- CREATE BUTTON -->
-        <Grid Grid.Row="0" Grid.Column="1">
-            <Border 
-                Background="{StaticResource BrushSecondaryBackground}" 
-                CornerRadius="10" 
-                Margin="10"
-                Padding="10"
-                HorizontalAlignment="Stretch" 
-                VerticalAlignment="Stretch">
-                <Button Content="NOWY ELEMENT" Background="{StaticResource BrushPositive}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Click="OpenCreateModal_Click"></Button>
-            </Border>
-        </Grid>
 
-
-            <!-- PIE CHART -->
-        <Grid Grid.Row="0" Grid.Column="2" Grid.RowSpan="2">
+        <!-- PIE CHART -->
+        <Grid Grid.Row="0" Grid.Column="3" Grid.RowSpan="2">
             <Border 
                 Background="{StaticResource BrushSecondaryBackground}" 
                 CornerRadius="10" 
@@ -86,7 +90,7 @@
         </Grid>
 
         <!-- YEARLY SUMMARY -->
-        <Grid Grid.Row="1" Grid.Column="0">
+        <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="2">
             <Border 
                 Background="{StaticResource BrushSecondaryBackground}" 
                 CornerRadius="10" 
@@ -104,7 +108,7 @@
         </Grid>
 
         <!-- MONTHLY SUMMARY -->
-        <Grid Grid.Row="1" Grid.Column="1">
+        <Grid Grid.Row="0" Grid.Column="2" Grid.RowSpan="2">
             <Border 
                 Background="{StaticResource BrushSecondaryBackground}" 
                 CornerRadius="10" 

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\Jedrulcia\Desktop\Jedrzej\Programowanko\github\FinanceTracker\FinanceTracker.WPF\App.xaml
-5-1043411251
+6-192279329
 
 34900599475
 250-1223046534
-Styles\Common.xaml;Styles\ScrollBarStyles.xaml;Views\CreateWindow.xaml;Views\EditWindow.xaml;Views\MainWindow.xaml;
+Styles\Common.xaml;Styles\RoundedButtonStyle.xaml;Styles\ScrollBarStyles.xaml;Views\CreateWindow.xaml;Views\EditWindow.xaml;Views\MainWindow.xaml;
 
 False
 
