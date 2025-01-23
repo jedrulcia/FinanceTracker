@@ -8,6 +8,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="680" Width="1200">
 
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Styles/ScrollBarStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
     <Grid Background="{StaticResource BrushPrimaryBackground}">
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
@@ -117,18 +125,23 @@
         <!-- SALARY -->
         <Grid Grid.Row="2" Grid.Column="0">
             <Border 
-             Background="{StaticResource BrushSecondaryBackground}" 
-            CornerRadius="10" 
-            Margin="10"
-            Padding="10"
-            HorizontalAlignment="Stretch" 
-            VerticalAlignment="Stretch">
+        Background="{StaticResource BrushSecondaryBackground}" 
+        CornerRadius="10" 
+        Margin="10"
+        Padding="10"
+        HorizontalAlignment="Stretch" 
+        VerticalAlignment="Stretch">
                 <ListBox 
-                ItemsSource="{Binding SalaryVMs}" 
-                Background="Transparent" 
-                BorderThickness="0"
-                HorizontalAlignment="Stretch" 
-                VerticalAlignment="Stretch">
+            ItemsSource="{Binding SalaryVMs}" 
+            Background="Transparent" 
+            BorderThickness="0"
+            HorizontalAlignment="Stretch" 
+            VerticalAlignment="Stretch"
+            ScrollViewer.VerticalScrollBarVisibility="Visible"
+            ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox.Resources>
+                        <Style TargetType="{x:Type ScrollBar}" BasedOn="{StaticResource CustomScrollBarStyle}" />
+                    </ListBox.Resources>
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Border>
@@ -151,6 +164,7 @@
         </Grid>
 
 
+
         <!-- ONGOING EXPENSES -->
         <Grid Grid.Row="2" Grid.Column="1">
             <Border 
@@ -166,6 +180,9 @@
                 BorderThickness="0"
                 HorizontalAlignment="Stretch" 
                 VerticalAlignment="Stretch">
+                    <ListBox.Resources>
+                        <Style TargetType="{x:Type ScrollBar}" BasedOn="{StaticResource CustomScrollBarStyle}" />
+                    </ListBox.Resources>
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Border>
@@ -202,6 +219,9 @@
                 BorderThickness="0"
                 HorizontalAlignment="Stretch" 
                 VerticalAlignment="Stretch">
+                    <ListBox.Resources>
+                        <Style TargetType="{x:Type ScrollBar}" BasedOn="{StaticResource CustomScrollBarStyle}" />
+                    </ListBox.Resources>
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Border>
@@ -238,6 +258,9 @@
                 BorderThickness="0"
                 HorizontalAlignment="Stretch" 
                 VerticalAlignment="Stretch">
+                    <ListBox.Resources>
+                        <Style TargetType="{x:Type ScrollBar}" BasedOn="{StaticResource CustomScrollBarStyle}" />
+                    </ListBox.Resources>
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Border>
