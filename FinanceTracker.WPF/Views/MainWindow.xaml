@@ -16,7 +16,7 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
-    
+
     <Grid Background="{StaticResource BrushPrimaryBackground}">
         <Grid.RowDefinitions>
             <RowDefinition Height="10*"/>
@@ -306,6 +306,20 @@
                                           MaxColumnWidth="25" 
                                           Values="{Binding ColumnChartCharges}"/>
                     </lvc:CartesianChart.Series>
+                    <lvc:CartesianChart.AxisX>
+                        <lvc:Axis Labels="{Binding ColumnChartLabels}">
+                            <lvc:Axis.Separator>
+                                <lvc:Separator IsEnabled="False" Step="1"/>
+                            </lvc:Axis.Separator>
+                        </lvc:Axis>
+                    </lvc:CartesianChart.AxisX>
+                    <lvc:CartesianChart.AxisY>
+                        <lvc:Axis>
+                            <lvc:Axis.Separator>
+                                <lvc:Separator Stroke="Gray"/>
+                            </lvc:Axis.Separator>
+                        </lvc:Axis>
+                    </lvc:CartesianChart.AxisY>
                 </lvc:CartesianChart>
             </Border>
         </Grid>

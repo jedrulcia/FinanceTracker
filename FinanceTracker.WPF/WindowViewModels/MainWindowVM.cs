@@ -128,6 +128,18 @@ public class MainWindowVM : ObservableObject
 		}
 	}
 
+	private ObservableCollection<string> columnChartLabels = new ObservableCollection<string>
+	{ "Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień" };
+	public ObservableCollection<string> ColumnChartLabels
+	{
+		get => columnChartLabels;
+		set
+		{
+			columnChartLabels = value;
+			OnPropertyChanged();
+		}
+	}
+
 	private PieChartVM pieChartVM;
 	public PieChartVM PieChartVM
 	{
