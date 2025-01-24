@@ -32,12 +32,12 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <!-- MONTHS COMBOBOX -->
         <Grid Grid.Row="0" Grid.Column="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
+            <!-- MONTHS COMBOBOX -->
             <Border 
                 Grid.Column="0"
                 Background="{StaticResource BrushSecondaryBackground}" 
@@ -47,12 +47,12 @@
                 HorizontalAlignment="Stretch" 
                 VerticalAlignment="Stretch">
                 <ComboBox 
-                    Background="{StaticResource BrushNeutral}" 
                     HorizontalAlignment="Stretch" 
                     VerticalAlignment="Stretch" 
                     ItemsSource="{Binding Months}" 
                     SelectedItem="{Binding SelectedMonth}" />
             </Border>
+            <!-- BUTTON -->
             <Button Grid.Column="1"
                     Style="{DynamicResource RoundedButtonStyle}" Content="NOWY" 
                     HorizontalAlignment="Stretch" 
@@ -76,14 +76,14 @@
                 Padding="10"
                 HorizontalAlignment="Stretch" 
                 VerticalAlignment="Stretch">
-                <lvc:PieChart LegendLocation="Right">
+                <lvc:PieChart LegendLocation="Right" Foreground="White" FontWeight="Bold" DataTooltip="{x:Null}">
                     <lvc:PieChart.Series >
-                        <lvc:PieSeries Title="Jedzenie" Values="{Binding PieChartVM.Food}" Fill="#9966FF"/>
-                        <lvc:PieSeries Title="Paliwo" Values="{Binding PieChartVM.Fuel}" Fill="#FFDD33"/>
-                        <lvc:PieSeries Title="Mieszkanie" Values="{Binding PieChartVM.Flat}" Fill="#4BC0C0"/>
-                        <lvc:PieSeries Title="Rachunki" Values="{Binding PieChartVM.Bills}" Fill="#FF9F40"/>
-                        <lvc:PieSeries Title="Raty" Values="{Binding PieChartVM.Rates}" Fill="#36A2EB"/>
-                        <lvc:PieSeries Title="Inne" Values="{Binding PieChartVM.Other}" Fill="#FF6384 "/>
+                        <lvc:PieSeries Title="Jedzenie" Values="{Binding PieChartVM.Food}" Fill="#9966FF" DataLabels="True" LabelPoint="{Binding PieChartVM.LabelFormatter}"/>
+                        <lvc:PieSeries Title="Paliwo" Values="{Binding PieChartVM.Fuel}" Fill="#FFDD33" DataLabels="True" LabelPoint="{Binding PieChartVM.LabelFormatter}"/>
+                        <lvc:PieSeries Title="Mieszkanie" Values="{Binding PieChartVM.Flat}" Fill="#4BC0C0" DataLabels="True" LabelPoint="{Binding PieChartVM.LabelFormatter}"/>
+                        <lvc:PieSeries Title="Rachunki" Values="{Binding PieChartVM.Bills}" Fill="#FF9F40" DataLabels="True" LabelPoint="{Binding PieChartVM.LabelFormatter}"/>
+                        <lvc:PieSeries Title="Raty" Values="{Binding PieChartVM.Rates}" Fill="#36A2EB" DataLabels="True" LabelPoint="{Binding PieChartVM.LabelFormatter}"/>
+                        <lvc:PieSeries Title="Inne" Values="{Binding PieChartVM.Other}" Fill="#FF6384" DataLabels="True" LabelPoint="{Binding PieChartVM.LabelFormatter}"/>
                     </lvc:PieChart.Series>
                 </lvc:PieChart>
             </Border>

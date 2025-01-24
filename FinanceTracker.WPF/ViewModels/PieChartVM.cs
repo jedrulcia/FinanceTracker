@@ -16,6 +16,7 @@ namespace FinanceTracker.WPF.ViewModels
 		public ChartValues<ObservableValue> Bills { get; set; }
 		public ChartValues<ObservableValue> Rates { get; set; }
 		public ChartValues<ObservableValue> Other { get; set; }
+		public Func<ChartPoint, string> LabelFormatter => point => point.Y > 0 ? ((int)point.Y).ToString() : string.Empty;
 		public PieChartVM(List<ChartValues<ObservableValue>> result)
 		{
 			this.Food = result[0];
